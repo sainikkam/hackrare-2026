@@ -1,0 +1,52 @@
+disease:
+  name: "Angelman Syndrome"
+  omim_ids: ["105830"]
+  genes: ["UBE3A"]
+  entrez_ids: [7337]
+  ensembl_ids: ["ENSG00000114062"]
+  opentargets_search: "angelman syndrome"
+  disgenet_disease_id: "C0162635"
+
+layer2_diseases:
+  - name: "Rett Syndrome"
+    genes: ["MECP2"]
+    entrez_ids: [4204]
+    opentargets_search: "rett syndrome"
+  - name: "Fragile X Syndrome"
+    genes: ["FMR1"]
+    entrez_ids: [2332]
+    opentargets_search: "fragile x syndrome"
+  - name: "SYNGAP1-Related Disorders"
+    genes: ["SYNGAP1"]
+    entrez_ids: [8831]
+    opentargets_search: "SYNGAP1"
+  - name: "Tuberous Sclerosis Complex"
+    genes: ["TSC1", "TSC2"]
+    entrez_ids: [7248, 7249]
+    opentargets_search: "tuberous sclerosis"
+  - name: "Phelan-McDermid Syndrome"
+    genes: ["SHANK3"]
+    entrez_ids: [85358]
+    opentargets_search: "phelan mcdermid syndrome"
+
+filters:
+  chembl_min_pchembl: 7.0
+  opentargets_min_genetic_score: 0.3
+  string_confidence: 700
+  bbb_gate_threshold: 0.8
+  scoring_method: magnitude_aware_cosine
+  pediatric_safety_threshold: 0.6
+  min_final_score_display: 0.2
+  max_candidates: 40
+
+positive_controls:
+  - drug_name: "minocycline"
+    chembl_id: "CHEMBL97286"
+  - drug_name: "topiramate"
+    chembl_id: "CHEMBL220492"
+
+negative_controls:
+  - drug_name: "imatinib"
+    chembl_id: "CHEMBL941"
+  - drug_name: "imiglucerase"
+    chembl_id: "CHEMBL1201570"

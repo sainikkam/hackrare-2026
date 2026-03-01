@@ -22,6 +22,19 @@ from src.loaders.pubchem_loader import get_properties_by_name
 logger = logging.getLogger(__name__)
 
 
+def _magnitude_aware_cosine(evidence: list[float], reference: list[float]) -> float:
+    """
+    s(a, b) = clamp((a·b) / (b·b), 0, 1)
+    With reference=[1,1,1]: equals arithmetic mean clamped to [0,1].
+    Satisfies s([0.3,0.3,0.3],[1,1,1]) = 0.3.
+    """
+    dot_ab = sum(a * b for a, b in zip(evidence, reference))
+    dot_bb = sum(b * b for b in reference)
+    if dot_bb == 0:
+        return 0.0
+    return round(max(0.0, min(1.0, dot_ab / dot_bb)), 3)
+
+
 def score_drug(
     drug: dict,
     disease_config: dict,
@@ -95,7 +108,9 @@ def _build_result(drug, bbb, safety, c1, c2, c3, status) -> dict:
     chembl_id = drug.get("chembl_id", "")
 
     if status == "scored":
-        final_score = round((c1["score"] + c2["score"] + c3["score"]) / 3.0, 3)
+        evidence_vector  = [c1["score"], c2["score"], c3["score"]]
+        reference_vector = [1.0, 1.0, 1.0]
+        final_score = _magnitude_aware_cosine(evidence_vector, reference_vector)
     else:
         final_score = None
 
@@ -132,6 +147,7 @@ def _build_result(drug, bbb, safety, c1, c2, c3, status) -> dict:
             "drug_targets": c1.get("drug_target_genes_expanded") or c1.get("drug_target_genes", []),
             "mean_network_distance": c2.get("mean_distance"),
             "hpo_confidence": c3.get("confidence"),
+            "scoring_method": "magnitude_aware_cosine",
         }
 
     return result

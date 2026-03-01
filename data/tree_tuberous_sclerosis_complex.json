@@ -29,9 +29,9 @@
         "hpo_similarity": 0.517,
         "pathway_similarity": 0.01,
         "n_candidates_evaluated": 18,
-        "n_gate1_pass": 7,
-        "n_gate2_pass": 5,
-        "n_scored": 5,
+        "n_gate1_pass": 3,
+        "n_gate2_pass": 3,
+        "n_scored": 3,
         "drugs": [
           {
             "drug_name": "EVEROLIMUS",
@@ -42,7 +42,7 @@
             "caution": true,
             "caution_label": "Caution: limited pediatric data",
             "scores": {
-              "bbb": 0.611,
+              "bbb": 0.9,
               "safety": 0.61,
               "pathway_alignment": 0.242,
               "network_proximity": 0.5,
@@ -96,21 +96,22 @@
                 "CREBBP"
               ],
               "drug_targets": [
-                "RPTOR",
-                "CALM3",
-                "MTOR",
-                "FKBP1A",
-                "PPP3R1",
                 "CALML3",
+                "MTOR",
                 "MLST8",
+                "ACVR1",
+                "FKBP1A",
                 "CALML6",
-                "TGFBR1",
                 "CALML5",
-                "ACVR1"
+                "CALM3",
+                "TGFBR1",
+                "RPTOR",
+                "PPP3R1"
               ],
               "mean_network_distance": 1.0,
               "hpo_confidence": "High",
-              "bbb_method": "composite",
+              "scoring_method": "magnitude_aware_cosine",
+              "bbb_method": "clinical_evidence_authoritative",
               "bbb_experimental_evidence": "FDA-approved for TSC-associated SEGA and partial-onset seizures (CNS indications). CSF penetration documented. Reference: Franz et al., 2013.",
               "min_age_years": 0.0,
               "pediatric_approved": false,
@@ -126,7 +127,7 @@
             "caution": true,
             "caution_label": "Caution: limited pediatric data",
             "scores": {
-              "bbb": 0.579,
+              "bbb": 0.85,
               "safety": 0.61,
               "pathway_alignment": 0.242,
               "network_proximity": 0.5,
@@ -180,21 +181,22 @@
                 "CREBBP"
               ],
               "drug_targets": [
-                "RPTOR",
-                "CALM3",
-                "MTOR",
-                "FKBP1A",
-                "PPP3R1",
                 "CALML3",
+                "MTOR",
                 "MLST8",
+                "ACVR1",
+                "FKBP1A",
                 "CALML6",
-                "TGFBR1",
                 "CALML5",
-                "ACVR1"
+                "CALM3",
+                "TGFBR1",
+                "RPTOR",
+                "PPP3R1"
               ],
               "mean_network_distance": 1.0,
               "hpo_confidence": "High",
-              "bbb_method": "composite",
+              "scoring_method": "magnitude_aware_cosine",
+              "bbb_method": "clinical_evidence_authoritative",
               "bbb_experimental_evidence": "Preclinical CNS efficacy in SYNGAP1, TSC, and NF1 mouse models. CNS exposure sufficient for mTOR inhibition at systemic doses. Reference: Bhatt et al., 2020.",
               "min_age_years": 0.0,
               "pediatric_approved": false,
@@ -210,7 +212,7 @@
             "caution": true,
             "caution_label": "Caution: limited pediatric data",
             "scores": {
-              "bbb": 0.704,
+              "bbb": 0.88,
               "safety": 0.61,
               "pathway_alignment": 0.035,
               "network_proximity": 0.308,
@@ -264,184 +266,27 @@
                 "MAGEL2"
               ],
               "drug_targets": [
+                "BRAF",
+                "MAPK1",
+                "MAP2K2",
+                "KSR2",
+                "MAP3K1",
+                "KSR1",
+                "MAPK3",
+                "RAF1",
                 "MAP2K1",
                 "ARAF",
-                "MAPK3",
-                "MAPK1",
-                "KSR2",
-                "KSR1",
-                "RAF1",
-                "MAP3K1",
                 "LAMTOR3",
-                "KRAS",
-                "MAP2K2",
-                "BRAF"
+                "KRAS"
               ],
               "mean_network_distance": 2.25,
               "hpo_confidence": "High",
-              "bbb_method": "composite",
+              "scoring_method": "magnitude_aware_cosine",
+              "bbb_method": "clinical_evidence_authoritative",
               "bbb_experimental_evidence": "FDA-approved for NF1 plexiform neurofibromas (pediatric >= 2 years). Active trials for NF1 optic pathway gliomas confirm CNS penetration. Reference: Dombi et al., 2016.",
               "min_age_years": 0.0,
               "pediatric_approved": false,
               "pediatric_ae_rate": null
-            }
-          },
-          {
-            "drug_name": "CELECOXIB",
-            "chembl_id": "CHEMBL118",
-            "drug_phase": 2,
-            "moa": "Cyclooxygenase-2 inhibitor",
-            "final_score": 0.246,
-            "caution": false,
-            "caution_label": null,
-            "scores": {
-              "bbb": 0.622,
-              "safety": 1.0,
-              "pathway_alignment": 0.016,
-              "network_proximity": 0.286,
-              "phenotypic_overlap": 0.437
-            },
-            "evidence": {
-              "top_shared_pathways": [
-                "TP53 Regulates Metabolic Genes"
-              ],
-              "top_shared_hpo_terms": [
-                {
-                  "term_id": "HP:0002888",
-                  "name": "Ependymoma",
-                  "ic": 16.602834159655725
-                },
-                {
-                  "term_id": "HP:0009592",
-                  "name": "Astrocytoma",
-                  "ic": 15.524831647654452
-                },
-                {
-                  "term_id": "HP:0005584",
-                  "name": "Renal cell carcinoma",
-                  "ic": 14.072319442956944
-                },
-                {
-                  "term_id": "HP:0003593",
-                  "name": "Infantile onset",
-                  "ic": 10.13704104076699
-                },
-                {
-                  "term_id": "HP:0000006",
-                  "name": "Autosomal dominant inheritance",
-                  "ic": 9.2181703094204
-                }
-              ],
-              "shared_genes": [
-                "TP53",
-                "BRAF",
-                "GNAS",
-                "PIK3CA",
-                "KRAS",
-                "HLA-DRB1",
-                "LMNA",
-                "TERT",
-                "PRKAR1A",
-                "PTCH1"
-              ],
-              "drug_targets": [
-                "PTGS2",
-                "CXCL8",
-                "ALOX15",
-                "IL6",
-                "PLA2G4A",
-                "IL1B",
-                "TP53",
-                "ALOX5",
-                "PTGIS",
-                "PTGES2",
-                "PTGES"
-              ],
-              "mean_network_distance": 2.5,
-              "hpo_confidence": "High",
-              "bbb_method": "physicochemical",
-              "bbb_experimental_evidence": null,
-              "min_age_years": 0.0,
-              "pediatric_approved": true,
-              "pediatric_ae_rate": 0.0
-            }
-          },
-          {
-            "drug_name": "LOVASTATIN",
-            "chembl_id": "CHEMBL503",
-            "drug_phase": 2,
-            "moa": "HMG-CoA reductase inhibitor",
-            "final_score": 0.233,
-            "caution": false,
-            "caution_label": null,
-            "scores": {
-              "bbb": 0.669,
-              "safety": 1.0,
-              "pathway_alignment": 0.006,
-              "network_proximity": 0.267,
-              "phenotypic_overlap": 0.427
-            },
-            "evidence": {
-              "top_shared_pathways": [],
-              "top_shared_hpo_terms": [
-                {
-                  "term_id": "HP:0006772",
-                  "name": "Renal angiomyolipoma",
-                  "ic": 17.187796660376883
-                },
-                {
-                  "term_id": "HP:0003593",
-                  "name": "Infantile onset",
-                  "ic": 10.13704104076699
-                },
-                {
-                  "term_id": "HP:0000006",
-                  "name": "Autosomal dominant inheritance",
-                  "ic": 9.2181703094204
-                },
-                {
-                  "term_id": "HP:0001249",
-                  "name": "Intellectual disability",
-                  "ic": 8.679011498312368
-                },
-                {
-                  "term_id": "HP:0000365",
-                  "name": "Hearing impairment",
-                  "ic": 8.61857395183274
-                }
-              ],
-              "shared_genes": [
-                "LMNA",
-                "BRAF",
-                "FGFR2",
-                "PTCH1",
-                "POLG",
-                "KRAS",
-                "GBA1",
-                "MVK",
-                "FGFR1",
-                "ERCC6"
-              ],
-              "drug_targets": [
-                "INSIG2",
-                "HMGCR",
-                "SREBF1",
-                "MVK",
-                "SQLE",
-                "INSIG1",
-                "SREBF2",
-                "FDFT1",
-                "HMGCS1",
-                "HMGCS2",
-                "FDPS"
-              ],
-              "mean_network_distance": 2.75,
-              "hpo_confidence": "High",
-              "bbb_method": "composite",
-              "bbb_experimental_evidence": "Lipophilic statin with documented CNS penetration. Cognitive effects studied in NF1. Reference: Krab et al., 2008.",
-              "min_age_years": 1.0,
-              "pediatric_approved": true,
-              "pediatric_ae_rate": 0.0
             }
           }
         ],
@@ -471,8 +316,16 @@
             "bbb_score": 0.234
           },
           {
+            "drug_name": "LOVASTATIN",
+            "bbb_score": 0.669
+          },
+          {
             "drug_name": "MIRDAMETINIB",
             "bbb_score": 0.35
+          },
+          {
+            "drug_name": "LAMOTRIGINE",
+            "bbb_score": 0.681
           },
           {
             "drug_name": "VINCRISTINE",
@@ -483,6 +336,14 @@
             "bbb_score": 0.25
           },
           {
+            "drug_name": "CHOLECALCIFEROL",
+            "bbb_score": 0.54
+          },
+          {
+            "drug_name": "CELECOXIB",
+            "bbb_score": 0.622
+          },
+          {
             "drug_name": "ABEMACICLIB",
             "bbb_score": 0.382
           },
@@ -491,16 +352,7 @@
             "bbb_score": 0.3
           }
         ],
-        "gate2_failures": [
-          {
-            "drug_name": "LAMOTRIGINE",
-            "safety_score": 0.0
-          },
-          {
-            "drug_name": "CHOLECALCIFEROL",
-            "safety_score": 0.0
-          }
-        ]
+        "gate2_failures": []
       },
       {
         "disease": "Angelman Syndrome",
@@ -508,27 +360,28 @@
         "hpo_similarity": 0.511,
         "pathway_similarity": 0.016,
         "n_candidates_evaluated": 4,
-        "n_gate1_pass": 4,
+        "n_gate1_pass": 1,
         "n_gate2_pass": 0,
         "n_scored": 0,
         "drugs": [],
-        "gate1_failures": [],
+        "gate1_failures": [
+          {
+            "drug_name": "LEVODOPA",
+            "bbb_score": 0.625
+          },
+          {
+            "drug_name": "CARBIDOPA",
+            "bbb_score": 0.625
+          },
+          {
+            "drug_name": "CARBIDOPA ANHYDROUS",
+            "bbb_score": 0.625
+          }
+        ],
         "gate2_failures": [
           {
             "drug_name": "GABOXADOL",
             "safety_score": 0.37
-          },
-          {
-            "drug_name": "LEVODOPA",
-            "safety_score": 0.37
-          },
-          {
-            "drug_name": "CARBIDOPA",
-            "safety_score": 0.37
-          },
-          {
-            "drug_name": "CARBIDOPA ANHYDROUS",
-            "safety_score": 0.33
           }
         ]
       },
@@ -538,69 +391,10 @@
         "hpo_similarity": 0.486,
         "pathway_similarity": 0.036,
         "n_candidates_evaluated": 14,
-        "n_gate1_pass": 12,
-        "n_gate2_pass": 7,
-        "n_scored": 7,
+        "n_gate1_pass": 4,
+        "n_gate2_pass": 2,
+        "n_scored": 2,
         "drugs": [
-          {
-            "drug_name": "FINGOLIMOD",
-            "chembl_id": "CHEMBL314854",
-            "drug_phase": 1,
-            "moa": "Sphingosine 1-phosphate receptor binding agent",
-            "final_score": 0.257,
-            "caution": true,
-            "caution_label": "Caution: limited pediatric data",
-            "scores": {
-              "bbb": 0.514,
-              "safety": 0.61,
-              "pathway_alignment": 0.021,
-              "network_proximity": 0.222,
-              "phenotypic_overlap": 0.527
-            },
-            "evidence": {
-              "top_shared_pathways": [
-                "Potential therapeutics for SARS"
-              ],
-              "top_shared_hpo_terms": [
-                {
-                  "term_id": "HP:0003593",
-                  "name": "Infantile onset",
-                  "ic": 10.13704104076699
-                },
-                {
-                  "term_id": "HP:0000365",
-                  "name": "Hearing impairment",
-                  "ic": 8.61857395183274
-                }
-              ],
-              "shared_genes": [
-                "TSC2",
-                "TSC1",
-                "IFNG",
-                "FGFR3",
-                "COL2A1",
-                "BRAF",
-                "FGF8",
-                "PIK3CA",
-                "PTCH1",
-                "FGFR1"
-              ],
-              "drug_targets": [
-                "S1PR1",
-                "S1PR3",
-                "S1PR4",
-                "S1PR5",
-                "S1PR2"
-              ],
-              "mean_network_distance": 3.5,
-              "hpo_confidence": "High",
-              "bbb_method": "physicochemical",
-              "bbb_experimental_evidence": null,
-              "min_age_years": 0.0,
-              "pediatric_approved": false,
-              "pediatric_ae_rate": null
-            }
-          },
           {
             "drug_name": "RISPERIDONE",
             "chembl_id": "CHEMBL85",
@@ -658,22 +452,23 @@
                 "DLL1"
               ],
               "drug_targets": [
-                "CNR1",
-                "SLC6A3",
-                "HTR2A",
+                "GRM2",
+                "HTR2C",
                 "GNB1",
+                "SLC6A3",
+                "GNAI1",
                 "GNAI2",
+                "ARRB2",
                 "ADORA2A",
                 "GNAQ",
-                "GNAI1",
+                "HTR2A",
                 "DRD2",
-                "NCS1",
-                "ARRB2",
-                "GRM2",
-                "HTR2C"
+                "CNR1",
+                "NCS1"
               ],
               "mean_network_distance": 2.75,
               "hpo_confidence": "High",
+              "scoring_method": "magnitude_aware_cosine",
               "bbb_method": "physicochemical",
               "bbb_experimental_evidence": null,
               "min_age_years": 0.0,
@@ -690,7 +485,7 @@
             "caution": true,
             "caution_label": "Caution: limited pediatric data",
             "scores": {
-              "bbb": 0.94,
+              "bbb": 0.96,
               "safety": 0.61,
               "pathway_alignment": 0.0,
               "network_proximity": 0.257,
@@ -748,320 +543,9 @@
               ],
               "mean_network_distance": 2.893,
               "hpo_confidence": "High",
-              "bbb_method": "composite",
+              "scoring_method": "magnitude_aware_cosine",
+              "bbb_method": "clinical_evidence_authoritative",
               "bbb_experimental_evidence": "Anesthetic/CNS drug with primary CNS target.",
-              "min_age_years": 0.0,
-              "pediatric_approved": false,
-              "pediatric_ae_rate": null
-            }
-          },
-          {
-            "drug_name": "LOVASTATIN",
-            "chembl_id": "CHEMBL503",
-            "drug_phase": 2,
-            "moa": "HMG-CoA reductase inhibitor",
-            "final_score": 0.233,
-            "caution": false,
-            "caution_label": null,
-            "scores": {
-              "bbb": 0.669,
-              "safety": 1.0,
-              "pathway_alignment": 0.006,
-              "network_proximity": 0.267,
-              "phenotypic_overlap": 0.427
-            },
-            "evidence": {
-              "top_shared_pathways": [],
-              "top_shared_hpo_terms": [
-                {
-                  "term_id": "HP:0006772",
-                  "name": "Renal angiomyolipoma",
-                  "ic": 17.187796660376883
-                },
-                {
-                  "term_id": "HP:0003593",
-                  "name": "Infantile onset",
-                  "ic": 10.13704104076699
-                },
-                {
-                  "term_id": "HP:0000006",
-                  "name": "Autosomal dominant inheritance",
-                  "ic": 9.2181703094204
-                },
-                {
-                  "term_id": "HP:0001249",
-                  "name": "Intellectual disability",
-                  "ic": 8.679011498312368
-                },
-                {
-                  "term_id": "HP:0000365",
-                  "name": "Hearing impairment",
-                  "ic": 8.61857395183274
-                }
-              ],
-              "shared_genes": [
-                "LMNA",
-                "BRAF",
-                "FGFR2",
-                "PTCH1",
-                "POLG",
-                "KRAS",
-                "GBA1",
-                "MVK",
-                "FGFR1",
-                "ERCC6"
-              ],
-              "drug_targets": [
-                "INSIG2",
-                "HMGCR",
-                "SREBF1",
-                "MVK",
-                "SQLE",
-                "INSIG1",
-                "SREBF2",
-                "FDFT1",
-                "HMGCS1",
-                "HMGCS2",
-                "FDPS"
-              ],
-              "mean_network_distance": 2.75,
-              "hpo_confidence": "High",
-              "bbb_method": "composite",
-              "bbb_experimental_evidence": "Lipophilic statin with documented CNS penetration. Cognitive effects studied in NF1. Reference: Krab et al., 2008.",
-              "min_age_years": 1.0,
-              "pediatric_approved": true,
-              "pediatric_ae_rate": 0.0
-            }
-          },
-          {
-            "drug_name": "CANNABIDIOL",
-            "chembl_id": "CHEMBL190461",
-            "drug_phase": 3,
-            "moa": "Cannabinoid CB1 receptor negative allosteric modulator",
-            "final_score": 0.156,
-            "caution": true,
-            "caution_label": "Caution: limited pediatric data",
-            "scores": {
-              "bbb": 0.514,
-              "safety": 0.61,
-              "pathway_alignment": 0.006,
-              "network_proximity": 0.0,
-              "phenotypic_overlap": 0.463
-            },
-            "evidence": {
-              "top_shared_pathways": [],
-              "top_shared_hpo_terms": [
-                {
-                  "term_id": "HP:0012469",
-                  "name": "Infantile spasms",
-                  "ic": 13.093279061592591
-                },
-                {
-                  "term_id": "HP:0000717",
-                  "name": "Autism",
-                  "ic": 12.42403100686696
-                },
-                {
-                  "term_id": "HP:0011097",
-                  "name": "Epileptic spasm",
-                  "ic": 11.893175911485253
-                },
-                {
-                  "term_id": "HP:0007018",
-                  "name": "Attention deficit hyperactivity disorder",
-                  "ic": 11.677362138305481
-                },
-                {
-                  "term_id": "HP:0000821",
-                  "name": "Hypothyroidism",
-                  "ic": 11.235540760559442
-                }
-              ],
-              "shared_genes": [
-                "PTCH1",
-                "STIL",
-                "GLI2",
-                "ZIC2",
-                "DLL1",
-                "SHH",
-                "FGF8",
-                "CDON",
-                "SIX3",
-                "NODAL"
-              ],
-              "drug_targets": [
-                "CNR1",
-                "CNR2",
-                "FAAH",
-                "GNB1",
-                "GNAI2",
-                "GPR55",
-                "GNAI1",
-                "DRD2",
-                "MGLL",
-                "ADORA2A",
-                "GNG2"
-              ],
-              "mean_network_distance": 10.0,
-              "hpo_confidence": "High",
-              "bbb_method": "physicochemical",
-              "bbb_experimental_evidence": null,
-              "min_age_years": 0.0,
-              "pediatric_approved": false,
-              "pediatric_ae_rate": null
-            }
-          },
-          {
-            "drug_name": "DONEPEZIL HYDROCHLORIDE",
-            "chembl_id": "CHEMBL1678",
-            "drug_phase": 3,
-            "moa": "Acetylcholinesterase inhibitor",
-            "final_score": 0.147,
-            "caution": true,
-            "caution_label": "Caution: limited pediatric data",
-            "scores": {
-              "bbb": 0.669,
-              "safety": 0.61,
-              "pathway_alignment": 0.012,
-              "network_proximity": 0.0,
-              "phenotypic_overlap": 0.429
-            },
-            "evidence": {
-              "top_shared_pathways": [],
-              "top_shared_hpo_terms": [
-                {
-                  "term_id": "HP:0002514",
-                  "name": "Cerebral calcification",
-                  "ic": 12.473551142710757
-                },
-                {
-                  "term_id": "HP:0000717",
-                  "name": "Autism",
-                  "ic": 12.42403100686696
-                },
-                {
-                  "term_id": "HP:0007018",
-                  "name": "Attention deficit hyperactivity disorder",
-                  "ic": 11.677362138305481
-                },
-                {
-                  "term_id": "HP:0000107",
-                  "name": "Renal cyst",
-                  "ic": 11.505972620403135
-                },
-                {
-                  "term_id": "HP:0000821",
-                  "name": "Hypothyroidism",
-                  "ic": 11.235540760559442
-                }
-              ],
-              "shared_genes": [
-                "HSPG2",
-                "FGFR2",
-                "COL2A1",
-                "LMNA",
-                "FGFR3",
-                "MAGEL2",
-                "FLNA",
-                "PTCH1",
-                "FGFR1",
-                "BRAF"
-              ],
-              "drug_targets": [
-                "DOK7",
-                "MAOB",
-                "APP",
-                "HSPG2",
-                "PHOSPHO1",
-                "CHKA",
-                "COLQ",
-                "GPCPD1",
-                "CHAT",
-                "CHKB",
-                "ACHE"
-              ],
-              "mean_network_distance": 10.0,
-              "hpo_confidence": "High",
-              "bbb_method": "physicochemical",
-              "bbb_experimental_evidence": null,
-              "min_age_years": 0.0,
-              "pediatric_approved": false,
-              "pediatric_ae_rate": null
-            }
-          },
-          {
-            "drug_name": "DONEPEZIL",
-            "chembl_id": "CHEMBL502",
-            "drug_phase": 3,
-            "moa": "Acetylcholinesterase inhibitor",
-            "final_score": 0.147,
-            "caution": true,
-            "caution_label": "Caution: limited pediatric data",
-            "scores": {
-              "bbb": 0.677,
-              "safety": 0.61,
-              "pathway_alignment": 0.012,
-              "network_proximity": 0.0,
-              "phenotypic_overlap": 0.429
-            },
-            "evidence": {
-              "top_shared_pathways": [],
-              "top_shared_hpo_terms": [
-                {
-                  "term_id": "HP:0002514",
-                  "name": "Cerebral calcification",
-                  "ic": 12.473551142710757
-                },
-                {
-                  "term_id": "HP:0000717",
-                  "name": "Autism",
-                  "ic": 12.42403100686696
-                },
-                {
-                  "term_id": "HP:0007018",
-                  "name": "Attention deficit hyperactivity disorder",
-                  "ic": 11.677362138305481
-                },
-                {
-                  "term_id": "HP:0000107",
-                  "name": "Renal cyst",
-                  "ic": 11.505972620403135
-                },
-                {
-                  "term_id": "HP:0000821",
-                  "name": "Hypothyroidism",
-                  "ic": 11.235540760559442
-                }
-              ],
-              "shared_genes": [
-                "HSPG2",
-                "FGFR2",
-                "COL2A1",
-                "LMNA",
-                "FGFR3",
-                "MAGEL2",
-                "FLNA",
-                "PTCH1",
-                "FGFR1",
-                "BRAF"
-              ],
-              "drug_targets": [
-                "DOK7",
-                "MAOB",
-                "APP",
-                "HSPG2",
-                "PHOSPHO1",
-                "CHKA",
-                "COLQ",
-                "GPCPD1",
-                "CHAT",
-                "CHKB",
-                "ACHE"
-              ],
-              "mean_network_distance": 10.0,
-              "hpo_confidence": "High",
-              "bbb_method": "physicochemical",
-              "bbb_experimental_evidence": null,
               "min_age_years": 0.0,
               "pediatric_approved": false,
               "pediatric_ae_rate": null
@@ -1070,30 +554,50 @@
         ],
         "gate1_failures": [
           {
+            "drug_name": "DONEPEZIL HYDROCHLORIDE",
+            "bbb_score": 0.669
+          },
+          {
+            "drug_name": "CANNABIDIOL",
+            "bbb_score": 0.514
+          },
+          {
+            "drug_name": "DONEPEZIL",
+            "bbb_score": 0.677
+          },
+          {
             "drug_name": "MECASERMIN",
             "bbb_score": 0.3
           },
           {
             "drug_name": "VATIQUINONE",
             "bbb_score": 0.473
+          },
+          {
+            "drug_name": "SARIZOTAN",
+            "bbb_score": 0.678
+          },
+          {
+            "drug_name": "LOVASTATIN",
+            "bbb_score": 0.669
+          },
+          {
+            "drug_name": "DESIPRAMINE",
+            "bbb_score": 0.578
+          },
+          {
+            "drug_name": "FINGOLIMOD",
+            "bbb_score": 0.514
+          },
+          {
+            "drug_name": "ESKETAMINE HYDROCHLORIDE",
+            "bbb_score": 0.681
           }
         ],
         "gate2_failures": [
           {
             "drug_name": "DEXTROMETHORPHAN",
             "safety_score": 0.37
-          },
-          {
-            "drug_name": "SARIZOTAN",
-            "safety_score": 0.33
-          },
-          {
-            "drug_name": "DESIPRAMINE",
-            "safety_score": 0.0
-          },
-          {
-            "drug_name": "ESKETAMINE HYDROCHLORIDE",
-            "safety_score": 0.0
           },
           {
             "drug_name": "ESKETAMINE",
@@ -1107,375 +611,42 @@
         "hpo_similarity": 0.507,
         "pathway_similarity": 0.0,
         "n_candidates_evaluated": 10,
-        "n_gate1_pass": 8,
-        "n_gate2_pass": 4,
-        "n_scored": 4,
-        "drugs": [
-          {
-            "drug_name": "GANAXOLONE",
-            "chembl_id": "CHEMBL1568698",
-            "drug_phase": 2,
-            "moa": "GABA-A receptor; anion channel positive allosteric modulator",
-            "final_score": 0.234,
-            "caution": true,
-            "caution_label": "Caution: limited pediatric data",
-            "scores": {
-              "bbb": 0.569,
-              "safety": 0.61,
-              "pathway_alignment": 0.0,
-              "network_proximity": 0.25,
-              "phenotypic_overlap": 0.451
-            },
-            "evidence": {
-              "top_shared_pathways": [],
-              "top_shared_hpo_terms": [
-                {
-                  "term_id": "HP:0009716",
-                  "name": "Subependymal nodules",
-                  "ic": 17.602834159655725
-                },
-                {
-                  "term_id": "HP:0012469",
-                  "name": "Infantile spasms",
-                  "ic": 13.093279061592591
-                },
-                {
-                  "term_id": "HP:0000717",
-                  "name": "Autism",
-                  "ic": 12.42403100686696
-                },
-                {
-                  "term_id": "HP:0011097",
-                  "name": "Epileptic spasm",
-                  "ic": 11.893175911485253
-                },
-                {
-                  "term_id": "HP:0007018",
-                  "name": "Attention deficit hyperactivity disorder",
-                  "ic": 11.677362138305481
-                }
-              ],
-              "shared_genes": [
-                "FGFR2",
-                "PTCH1",
-                "MAGEL2",
-                "FGFR1",
-                "GLI2",
-                "BRAF",
-                "CREBBP",
-                "SCN1A",
-                "SHH",
-                "FGFR3"
-              ],
-              "drug_targets": [
-                "GABRA6",
-                "GABRG3",
-                "GABRG1",
-                "GABRA3",
-                "GABRA5",
-                "GABRB2",
-                "GABRQ",
-                "GABRP",
-                "GABRA2",
-                "GABRB1",
-                "GABRE",
-                "GABRA1",
-                "GABRD",
-                "GABRG2",
-                "GABRA4",
-                "GABRB3"
-              ],
-              "mean_network_distance": 3.0,
-              "hpo_confidence": "High",
-              "bbb_method": "physicochemical",
-              "bbb_experimental_evidence": null,
-              "min_age_years": 0.0,
-              "pediatric_approved": false,
-              "pediatric_ae_rate": null
-            }
-          },
-          {
-            "drug_name": "METFORMIN",
-            "chembl_id": "CHEMBL1431",
-            "drug_phase": 2,
-            "moa": "Mitochondrial complex I (NADH dehydrogenase) inhibitor",
-            "final_score": 0.223,
-            "caution": true,
-            "caution_label": "Caution: limited pediatric data",
-            "scores": {
-              "bbb": 0.674,
-              "safety": 0.61,
-              "pathway_alignment": 0.011,
-              "network_proximity": 0.222,
-              "phenotypic_overlap": 0.436
-            },
-            "evidence": {
-              "top_shared_pathways": [],
-              "top_shared_hpo_terms": [
-                {
-                  "term_id": "HP:0001716",
-                  "name": "Wolff-Parkinson-White syndrome",
-                  "ic": 15.100333819126542
-                },
-                {
-                  "term_id": "HP:0034198",
-                  "name": "Second trimester onset",
-                  "ic": 14.706669970640265
-                },
-                {
-                  "term_id": "HP:0001662",
-                  "name": "Bradycardia",
-                  "ic": 13.524831647654452
-                },
-                {
-                  "term_id": "HP:0012469",
-                  "name": "Infantile spasms",
-                  "ic": 13.093279061592591
-                },
-                {
-                  "term_id": "HP:0002514",
-                  "name": "Cerebral calcification",
-                  "ic": 12.473551142710757
-                }
-              ],
-              "shared_genes": [
-                "POLG",
-                "PTCH1",
-                "LMNA",
-                "FGFR1",
-                "BRAF",
-                "FGFR2",
-                "MAGEL2",
-                "GLI2",
-                "MT-ND1",
-                "ERCC6"
-              ],
-              "drug_targets": [
-                "NDUFB4",
-                "NDUFA2",
-                "NDUFC2",
-                "NDUFB9",
-                "NDUFA6",
-                "NDUFAF3",
-                "NDUFA9",
-                "MT-ND4L",
-                "MT-ND2",
-                "NDUFB11",
-                "MT-ND5",
-                "NDUFS6",
-                "NDUFA3",
-                "NDUFB2",
-                "NDUFB7",
-                "NDUFC1",
-                "GPD2",
-                "MT-ND3",
-                "NDUFB1",
-                "NDUFS2",
-                "NDUFA8",
-                "NDUFAB1",
-                "NDUFS1",
-                "NDUFAF1",
-                "NDUFS3",
-                "MT-ND1",
-                "MT-ND4",
-                "COXFA4L2",
-                "NDUFAF4",
-                "NDUFV1",
-                "NDUFB6",
-                "NDUFB10",
-                "NDUFA7",
-                "NDUFS5",
-                "NDUFB8",
-                "NDUFA13",
-                "COXFA4",
-                "NDUFV2",
-                "NDUFA5",
-                "NDUFAF2",
-                "NDUFA10",
-                "NDUFS7",
-                "NDUFA11",
-                "NDUFB3",
-                "NDUFS8",
-                "NDUFB5",
-                "NDUFV3",
-                "NDUFA1",
-                "NDUFS4",
-                "NDUFA12",
-                "MT-ND6"
-              ],
-              "mean_network_distance": 3.5,
-              "hpo_confidence": "High",
-              "bbb_method": "composite",
-              "bbb_experimental_evidence": "Crosses BBB via OCT transporters. CNS effects documented in multiple neurological conditions. Reference: Ou et al., 2018.",
-              "min_age_years": 0.0,
-              "pediatric_approved": false,
-              "pediatric_ae_rate": null
-            }
-          },
+        "n_gate1_pass": 1,
+        "n_gate2_pass": 0,
+        "n_scored": 0,
+        "drugs": [],
+        "gate1_failures": [
           {
             "drug_name": "CANNABIDIOL",
-            "chembl_id": "CHEMBL190461",
-            "drug_phase": 3,
-            "moa": "Cannabinoid CB1 receptor negative allosteric modulator",
-            "final_score": 0.156,
-            "caution": true,
-            "caution_label": "Caution: limited pediatric data",
-            "scores": {
-              "bbb": 0.514,
-              "safety": 0.61,
-              "pathway_alignment": 0.006,
-              "network_proximity": 0.0,
-              "phenotypic_overlap": 0.463
-            },
-            "evidence": {
-              "top_shared_pathways": [],
-              "top_shared_hpo_terms": [
-                {
-                  "term_id": "HP:0012469",
-                  "name": "Infantile spasms",
-                  "ic": 13.093279061592591
-                },
-                {
-                  "term_id": "HP:0000717",
-                  "name": "Autism",
-                  "ic": 12.42403100686696
-                },
-                {
-                  "term_id": "HP:0011097",
-                  "name": "Epileptic spasm",
-                  "ic": 11.893175911485253
-                },
-                {
-                  "term_id": "HP:0007018",
-                  "name": "Attention deficit hyperactivity disorder",
-                  "ic": 11.677362138305481
-                },
-                {
-                  "term_id": "HP:0000821",
-                  "name": "Hypothyroidism",
-                  "ic": 11.235540760559442
-                }
-              ],
-              "shared_genes": [
-                "PTCH1",
-                "STIL",
-                "GLI2",
-                "ZIC2",
-                "DLL1",
-                "SHH",
-                "FGF8",
-                "CDON",
-                "SIX3",
-                "NODAL"
-              ],
-              "drug_targets": [
-                "CNR1",
-                "CNR2",
-                "FAAH",
-                "GNB1",
-                "GNAI2",
-                "GPR55",
-                "GNAI1",
-                "DRD2",
-                "MGLL",
-                "ADORA2A",
-                "GNG2"
-              ],
-              "mean_network_distance": 10.0,
-              "hpo_confidence": "High",
-              "bbb_method": "physicochemical",
-              "bbb_experimental_evidence": null,
-              "min_age_years": 0.0,
-              "pediatric_approved": false,
-              "pediatric_ae_rate": null
-            }
+            "bbb_score": 0.514
           },
           {
-            "drug_name": "ROFLUMILAST",
-            "chembl_id": "CHEMBL193240",
-            "drug_phase": 2,
-            "moa": "Phosphodiesterase 4 inhibitor",
-            "final_score": 0.144,
-            "caution": true,
-            "caution_label": "Caution: limited pediatric data",
-            "scores": {
-              "bbb": 0.549,
-              "safety": 0.61,
-              "pathway_alignment": 0.0,
-              "network_proximity": 0.0,
-              "phenotypic_overlap": 0.432
-            },
-            "evidence": {
-              "top_shared_pathways": [],
-              "top_shared_hpo_terms": [
-                {
-                  "term_id": "HP:0000717",
-                  "name": "Autism",
-                  "ic": 12.42403100686696
-                },
-                {
-                  "term_id": "HP:0011097",
-                  "name": "Epileptic spasm",
-                  "ic": 11.893175911485253
-                },
-                {
-                  "term_id": "HP:0000821",
-                  "name": "Hypothyroidism",
-                  "ic": 11.235540760559442
-                },
-                {
-                  "term_id": "HP:0000729",
-                  "name": "Autistic behavior",
-                  "ic": 10.659016995048848
-                },
-                {
-                  "term_id": "HP:0003593",
-                  "name": "Infantile onset",
-                  "ic": 10.13704104076699
-                }
-              ],
-              "shared_genes": [
-                "FGFR2",
-                "FGFR3",
-                "FGFR1",
-                "BRAF",
-                "COL2A1",
-                "FLNA",
-                "MAGEL2",
-                "GNAS",
-                "CREBBP",
-                "PTCH1"
-              ],
-              "drug_targets": [
-                "AKAP6",
-                "PRKACA",
-                "DISC1",
-                "PRKACG",
-                "PDE4B",
-                "ALDH7A1",
-                "PDE4A",
-                "PDE4C",
-                "ARRB1",
-                "PRKACB",
-                "PDE4D",
-                "ARRB2",
-                "AKAP1",
-                "PDE4DIP"
-              ],
-              "mean_network_distance": 10.0,
-              "hpo_confidence": "High",
-              "bbb_method": "physicochemical",
-              "bbb_experimental_evidence": null,
-              "min_age_years": 0.0,
-              "pediatric_approved": false,
-              "pediatric_ae_rate": null
-            }
-          }
-        ],
-        "gate1_failures": [
+            "drug_name": "ZATOLMILAST",
+            "bbb_score": 0.515
+          },
           {
             "drug_name": "ARIPIPRAZOLE",
             "bbb_score": 0.498
+          },
+          {
+            "drug_name": "ACAMPROSATE",
+            "bbb_score": 0.681
+          },
+          {
+            "drug_name": "METFORMIN",
+            "bbb_score": 0.674
+          },
+          {
+            "drug_name": "GANAXOLONE",
+            "bbb_score": 0.569
+          },
+          {
+            "drug_name": "SULINDAC",
+            "bbb_score": 0.719
+          },
+          {
+            "drug_name": "ROFLUMILAST",
+            "bbb_score": 0.549
           },
           {
             "drug_name": "ERGOLOID MESYLATES",
@@ -1486,18 +657,6 @@
           {
             "drug_name": "ARBACLOFEN",
             "safety_score": 0.37
-          },
-          {
-            "drug_name": "ZATOLMILAST",
-            "safety_score": 0.37
-          },
-          {
-            "drug_name": "ACAMPROSATE",
-            "safety_score": 0.37
-          },
-          {
-            "drug_name": "SULINDAC",
-            "safety_score": 0.37
           }
         ]
       }
@@ -1507,9 +666,9 @@
     "root_disease": "Tuberous Sclerosis Complex",
     "n_layer2_diseases": 5,
     "n_total_candidates": 46,
-    "n_gate1_pass": 31,
-    "n_gate2_pass": 16,
-    "n_scored": 16,
+    "n_gate1_pass": 9,
+    "n_gate2_pass": 5,
+    "n_scored": 5,
     "global_top_drugs": [
       {
         "drug_name": "EVEROLIMUS",
@@ -1520,7 +679,7 @@
         "caution": true,
         "caution_label": "Caution: limited pediatric data",
         "scores": {
-          "bbb": 0.611,
+          "bbb": 0.9,
           "safety": 0.61,
           "pathway_alignment": 0.242,
           "network_proximity": 0.5,
@@ -1574,21 +733,22 @@
             "CREBBP"
           ],
           "drug_targets": [
-            "RPTOR",
-            "CALM3",
-            "MTOR",
-            "FKBP1A",
-            "PPP3R1",
             "CALML3",
+            "MTOR",
             "MLST8",
+            "ACVR1",
+            "FKBP1A",
             "CALML6",
-            "TGFBR1",
             "CALML5",
-            "ACVR1"
+            "CALM3",
+            "TGFBR1",
+            "RPTOR",
+            "PPP3R1"
           ],
           "mean_network_distance": 1.0,
           "hpo_confidence": "High",
-          "bbb_method": "composite",
+          "scoring_method": "magnitude_aware_cosine",
+          "bbb_method": "clinical_evidence_authoritative",
           "bbb_experimental_evidence": "FDA-approved for TSC-associated SEGA and partial-onset seizures (CNS indications). CSF penetration documented. Reference: Franz et al., 2013.",
           "min_age_years": 0.0,
           "pediatric_approved": false,
@@ -1604,7 +764,7 @@
         "caution": true,
         "caution_label": "Caution: limited pediatric data",
         "scores": {
-          "bbb": 0.579,
+          "bbb": 0.85,
           "safety": 0.61,
           "pathway_alignment": 0.242,
           "network_proximity": 0.5,
@@ -1658,21 +818,22 @@
             "CREBBP"
           ],
           "drug_targets": [
-            "RPTOR",
-            "CALM3",
-            "MTOR",
-            "FKBP1A",
-            "PPP3R1",
             "CALML3",
+            "MTOR",
             "MLST8",
+            "ACVR1",
+            "FKBP1A",
             "CALML6",
-            "TGFBR1",
             "CALML5",
-            "ACVR1"
+            "CALM3",
+            "TGFBR1",
+            "RPTOR",
+            "PPP3R1"
           ],
           "mean_network_distance": 1.0,
           "hpo_confidence": "High",
-          "bbb_method": "composite",
+          "scoring_method": "magnitude_aware_cosine",
+          "bbb_method": "clinical_evidence_authoritative",
           "bbb_experimental_evidence": "Preclinical CNS efficacy in SYNGAP1, TSC, and NF1 mouse models. CNS exposure sufficient for mTOR inhibition at systemic doses. Reference: Bhatt et al., 2020.",
           "min_age_years": 0.0,
           "pediatric_approved": false,
@@ -1688,7 +849,7 @@
         "caution": true,
         "caution_label": "Caution: limited pediatric data",
         "scores": {
-          "bbb": 0.704,
+          "bbb": 0.88,
           "safety": 0.61,
           "pathway_alignment": 0.035,
           "network_proximity": 0.308,
@@ -1742,165 +903,27 @@
             "MAGEL2"
           ],
           "drug_targets": [
+            "BRAF",
+            "MAPK1",
+            "MAP2K2",
+            "KSR2",
+            "MAP3K1",
+            "KSR1",
+            "MAPK3",
+            "RAF1",
             "MAP2K1",
             "ARAF",
-            "MAPK3",
-            "MAPK1",
-            "KSR2",
-            "KSR1",
-            "RAF1",
-            "MAP3K1",
             "LAMTOR3",
-            "KRAS",
-            "MAP2K2",
-            "BRAF"
+            "KRAS"
           ],
           "mean_network_distance": 2.25,
           "hpo_confidence": "High",
-          "bbb_method": "composite",
+          "scoring_method": "magnitude_aware_cosine",
+          "bbb_method": "clinical_evidence_authoritative",
           "bbb_experimental_evidence": "FDA-approved for NF1 plexiform neurofibromas (pediatric >= 2 years). Active trials for NF1 optic pathway gliomas confirm CNS penetration. Reference: Dombi et al., 2016.",
           "min_age_years": 0.0,
           "pediatric_approved": false,
           "pediatric_ae_rate": null
-        }
-      },
-      {
-        "drug_name": "FINGOLIMOD",
-        "chembl_id": "CHEMBL314854",
-        "drug_phase": 1,
-        "moa": "Sphingosine 1-phosphate receptor binding agent",
-        "final_score": 0.257,
-        "caution": true,
-        "caution_label": "Caution: limited pediatric data",
-        "scores": {
-          "bbb": 0.514,
-          "safety": 0.61,
-          "pathway_alignment": 0.021,
-          "network_proximity": 0.222,
-          "phenotypic_overlap": 0.527
-        },
-        "evidence": {
-          "top_shared_pathways": [
-            "Potential therapeutics for SARS"
-          ],
-          "top_shared_hpo_terms": [
-            {
-              "term_id": "HP:0003593",
-              "name": "Infantile onset",
-              "ic": 10.13704104076699
-            },
-            {
-              "term_id": "HP:0000365",
-              "name": "Hearing impairment",
-              "ic": 8.61857395183274
-            }
-          ],
-          "shared_genes": [
-            "TSC2",
-            "TSC1",
-            "IFNG",
-            "FGFR3",
-            "COL2A1",
-            "BRAF",
-            "FGF8",
-            "PIK3CA",
-            "PTCH1",
-            "FGFR1"
-          ],
-          "drug_targets": [
-            "S1PR1",
-            "S1PR3",
-            "S1PR4",
-            "S1PR5",
-            "S1PR2"
-          ],
-          "mean_network_distance": 3.5,
-          "hpo_confidence": "High",
-          "bbb_method": "physicochemical",
-          "bbb_experimental_evidence": null,
-          "min_age_years": 0.0,
-          "pediatric_approved": false,
-          "pediatric_ae_rate": null
-        }
-      },
-      {
-        "drug_name": "CELECOXIB",
-        "chembl_id": "CHEMBL118",
-        "drug_phase": 2,
-        "moa": "Cyclooxygenase-2 inhibitor",
-        "final_score": 0.246,
-        "caution": false,
-        "caution_label": null,
-        "scores": {
-          "bbb": 0.622,
-          "safety": 1.0,
-          "pathway_alignment": 0.016,
-          "network_proximity": 0.286,
-          "phenotypic_overlap": 0.437
-        },
-        "evidence": {
-          "top_shared_pathways": [
-            "TP53 Regulates Metabolic Genes"
-          ],
-          "top_shared_hpo_terms": [
-            {
-              "term_id": "HP:0002888",
-              "name": "Ependymoma",
-              "ic": 16.602834159655725
-            },
-            {
-              "term_id": "HP:0009592",
-              "name": "Astrocytoma",
-              "ic": 15.524831647654452
-            },
-            {
-              "term_id": "HP:0005584",
-              "name": "Renal cell carcinoma",
-              "ic": 14.072319442956944
-            },
-            {
-              "term_id": "HP:0003593",
-              "name": "Infantile onset",
-              "ic": 10.13704104076699
-            },
-            {
-              "term_id": "HP:0000006",
-              "name": "Autosomal dominant inheritance",
-              "ic": 9.2181703094204
-            }
-          ],
-          "shared_genes": [
-            "TP53",
-            "BRAF",
-            "GNAS",
-            "PIK3CA",
-            "KRAS",
-            "HLA-DRB1",
-            "LMNA",
-            "TERT",
-            "PRKAR1A",
-            "PTCH1"
-          ],
-          "drug_targets": [
-            "PTGS2",
-            "CXCL8",
-            "ALOX15",
-            "IL6",
-            "PLA2G4A",
-            "IL1B",
-            "TP53",
-            "ALOX5",
-            "PTGIS",
-            "PTGES2",
-            "PTGES"
-          ],
-          "mean_network_distance": 2.5,
-          "hpo_confidence": "High",
-          "bbb_method": "physicochemical",
-          "bbb_experimental_evidence": null,
-          "min_age_years": 0.0,
-          "pediatric_approved": true,
-          "pediatric_ae_rate": 0.0
         }
       },
       {
@@ -1960,22 +983,23 @@
             "DLL1"
           ],
           "drug_targets": [
-            "CNR1",
-            "SLC6A3",
-            "HTR2A",
+            "GRM2",
+            "HTR2C",
             "GNB1",
+            "SLC6A3",
+            "GNAI1",
             "GNAI2",
+            "ARRB2",
             "ADORA2A",
             "GNAQ",
-            "GNAI1",
+            "HTR2A",
             "DRD2",
-            "NCS1",
-            "ARRB2",
-            "GRM2",
-            "HTR2C"
+            "CNR1",
+            "NCS1"
           ],
           "mean_network_distance": 2.75,
           "hpo_confidence": "High",
+          "scoring_method": "magnitude_aware_cosine",
           "bbb_method": "physicochemical",
           "bbb_experimental_evidence": null,
           "min_age_years": 0.0,
@@ -1992,7 +1016,7 @@
         "caution": true,
         "caution_label": "Caution: limited pediatric data",
         "scores": {
-          "bbb": 0.94,
+          "bbb": 0.96,
           "safety": 0.61,
           "pathway_alignment": 0.0,
           "network_proximity": 0.257,
@@ -2050,250 +1074,12 @@
           ],
           "mean_network_distance": 2.893,
           "hpo_confidence": "High",
-          "bbb_method": "composite",
+          "scoring_method": "magnitude_aware_cosine",
+          "bbb_method": "clinical_evidence_authoritative",
           "bbb_experimental_evidence": "Anesthetic/CNS drug with primary CNS target.",
           "min_age_years": 0.0,
           "pediatric_approved": false,
           "pediatric_ae_rate": null
-        }
-      },
-      {
-        "drug_name": "GANAXOLONE",
-        "chembl_id": "CHEMBL1568698",
-        "drug_phase": 2,
-        "moa": "GABA-A receptor; anion channel positive allosteric modulator",
-        "final_score": 0.234,
-        "caution": true,
-        "caution_label": "Caution: limited pediatric data",
-        "scores": {
-          "bbb": 0.569,
-          "safety": 0.61,
-          "pathway_alignment": 0.0,
-          "network_proximity": 0.25,
-          "phenotypic_overlap": 0.451
-        },
-        "evidence": {
-          "top_shared_pathways": [],
-          "top_shared_hpo_terms": [
-            {
-              "term_id": "HP:0009716",
-              "name": "Subependymal nodules",
-              "ic": 17.602834159655725
-            },
-            {
-              "term_id": "HP:0012469",
-              "name": "Infantile spasms",
-              "ic": 13.093279061592591
-            },
-            {
-              "term_id": "HP:0000717",
-              "name": "Autism",
-              "ic": 12.42403100686696
-            },
-            {
-              "term_id": "HP:0011097",
-              "name": "Epileptic spasm",
-              "ic": 11.893175911485253
-            },
-            {
-              "term_id": "HP:0007018",
-              "name": "Attention deficit hyperactivity disorder",
-              "ic": 11.677362138305481
-            }
-          ],
-          "shared_genes": [
-            "FGFR2",
-            "PTCH1",
-            "MAGEL2",
-            "FGFR1",
-            "GLI2",
-            "BRAF",
-            "CREBBP",
-            "SCN1A",
-            "SHH",
-            "FGFR3"
-          ],
-          "drug_targets": [
-            "GABRA6",
-            "GABRG3",
-            "GABRG1",
-            "GABRA3",
-            "GABRA5",
-            "GABRB2",
-            "GABRQ",
-            "GABRP",
-            "GABRA2",
-            "GABRB1",
-            "GABRE",
-            "GABRA1",
-            "GABRD",
-            "GABRG2",
-            "GABRA4",
-            "GABRB3"
-          ],
-          "mean_network_distance": 3.0,
-          "hpo_confidence": "High",
-          "bbb_method": "physicochemical",
-          "bbb_experimental_evidence": null,
-          "min_age_years": 0.0,
-          "pediatric_approved": false,
-          "pediatric_ae_rate": null
-        }
-      },
-      {
-        "drug_name": "LOVASTATIN",
-        "chembl_id": "CHEMBL503",
-        "drug_phase": 2,
-        "moa": "HMG-CoA reductase inhibitor",
-        "final_score": 0.233,
-        "caution": false,
-        "caution_label": null,
-        "scores": {
-          "bbb": 0.669,
-          "safety": 1.0,
-          "pathway_alignment": 0.006,
-          "network_proximity": 0.267,
-          "phenotypic_overlap": 0.427
-        },
-        "evidence": {
-          "top_shared_pathways": [],
-          "top_shared_hpo_terms": [
-            {
-              "term_id": "HP:0006772",
-              "name": "Renal angiomyolipoma",
-              "ic": 17.187796660376883
-            },
-            {
-              "term_id": "HP:0003593",
-              "name": "Infantile onset",
-              "ic": 10.13704104076699
-            },
-            {
-              "term_id": "HP:0000006",
-              "name": "Autosomal dominant inheritance",
-              "ic": 9.2181703094204
-            },
-            {
-              "term_id": "HP:0001249",
-              "name": "Intellectual disability",
-              "ic": 8.679011498312368
-            },
-            {
-              "term_id": "HP:0000365",
-              "name": "Hearing impairment",
-              "ic": 8.61857395183274
-            }
-          ],
-          "shared_genes": [
-            "LMNA",
-            "BRAF",
-            "FGFR2",
-            "PTCH1",
-            "POLG",
-            "KRAS",
-            "GBA1",
-            "MVK",
-            "FGFR1",
-            "ERCC6"
-          ],
-          "drug_targets": [
-            "INSIG2",
-            "HMGCR",
-            "SREBF1",
-            "MVK",
-            "SQLE",
-            "INSIG1",
-            "SREBF2",
-            "FDFT1",
-            "HMGCS1",
-            "HMGCS2",
-            "FDPS"
-          ],
-          "mean_network_distance": 2.75,
-          "hpo_confidence": "High",
-          "bbb_method": "composite",
-          "bbb_experimental_evidence": "Lipophilic statin with documented CNS penetration. Cognitive effects studied in NF1. Reference: Krab et al., 2008.",
-          "min_age_years": 1.0,
-          "pediatric_approved": true,
-          "pediatric_ae_rate": 0.0
-        }
-      },
-      {
-        "drug_name": "LOVASTATIN",
-        "chembl_id": "CHEMBL503",
-        "drug_phase": 2,
-        "moa": "HMG-CoA reductase inhibitor",
-        "final_score": 0.233,
-        "caution": false,
-        "caution_label": null,
-        "scores": {
-          "bbb": 0.669,
-          "safety": 1.0,
-          "pathway_alignment": 0.006,
-          "network_proximity": 0.267,
-          "phenotypic_overlap": 0.427
-        },
-        "evidence": {
-          "top_shared_pathways": [],
-          "top_shared_hpo_terms": [
-            {
-              "term_id": "HP:0006772",
-              "name": "Renal angiomyolipoma",
-              "ic": 17.187796660376883
-            },
-            {
-              "term_id": "HP:0003593",
-              "name": "Infantile onset",
-              "ic": 10.13704104076699
-            },
-            {
-              "term_id": "HP:0000006",
-              "name": "Autosomal dominant inheritance",
-              "ic": 9.2181703094204
-            },
-            {
-              "term_id": "HP:0001249",
-              "name": "Intellectual disability",
-              "ic": 8.679011498312368
-            },
-            {
-              "term_id": "HP:0000365",
-              "name": "Hearing impairment",
-              "ic": 8.61857395183274
-            }
-          ],
-          "shared_genes": [
-            "LMNA",
-            "BRAF",
-            "FGFR2",
-            "PTCH1",
-            "POLG",
-            "KRAS",
-            "GBA1",
-            "MVK",
-            "FGFR1",
-            "ERCC6"
-          ],
-          "drug_targets": [
-            "INSIG2",
-            "HMGCR",
-            "SREBF1",
-            "MVK",
-            "SQLE",
-            "INSIG1",
-            "SREBF2",
-            "FDFT1",
-            "HMGCS1",
-            "HMGCS2",
-            "FDPS"
-          ],
-          "mean_network_distance": 2.75,
-          "hpo_confidence": "High",
-          "bbb_method": "composite",
-          "bbb_experimental_evidence": "Lipophilic statin with documented CNS penetration. Cognitive effects studied in NF1. Reference: Krab et al., 2008.",
-          "min_age_years": 1.0,
-          "pediatric_approved": true,
-          "pediatric_ae_rate": 0.0
         }
       }
     ]
@@ -2354,9 +1140,9 @@
     "phenotypic_emphasized": [
       "EVEROLIMUS",
       "SIROLIMUS",
-      "FINGOLIMOD"
+      "SELUMETINIB"
     ],
-    "_stable": false,
+    "_stable": true,
     "_baseline_top3": [
       "EVEROLIMUS",
       "SIROLIMUS",

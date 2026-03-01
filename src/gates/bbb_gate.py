@@ -21,7 +21,7 @@ from src.loaders.pubchem_loader import get_properties_by_name
 
 logger = logging.getLogger(__name__)
 
-BBB_THRESHOLD = 0.5
+BBB_THRESHOLD = 0.8
 _EXP_BBB_PATH = Path(__file__).resolve().parents[2] / "data" / "experimental_bbb.json"
 _exp_bbb_cache: dict | None = None
 
@@ -142,15 +142,19 @@ def score_bbb(drug_name: str, props: dict | None = None) -> dict:
 
     if exp_entry:
         exp_score = exp_entry["score"]
-        # Composite: weight 0.35 physicochemical + 0.65 experimental
-        final_score = round(0.35 * physicochemical_score + 0.65 * exp_score, 3)
-        method = "composite"
+        if exp_score >= 0.80:
+            # Confirmed CNS clinical evidence is authoritative — use directly
+            final_score = round(exp_score, 3)
+            method = "clinical_evidence_authoritative"
+        else:
+            final_score = round(0.35 * physicochemical_score + 0.65 * exp_score, 3)
+            method = "composite"
     else:
         final_score = physicochemical_score
         exp_score = None
         method = "physicochemical"
 
-    passes = final_score > BBB_THRESHOLD
+    passes = final_score >= BBB_THRESHOLD
 
     result = {
         "score": final_score,

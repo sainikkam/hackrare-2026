@@ -27,93 +27,18 @@
         "hpo_similarity": 0.546,
         "pathway_similarity": 0.165,
         "n_candidates_evaluated": 3,
-        "n_gate1_pass": 1,
-        "n_gate2_pass": 1,
-        "n_scored": 1,
-        "drugs": [
-          {
-            "drug_name": "SIMVASTATIN",
-            "chembl_id": "CHEMBL1064",
-            "drug_phase": 3,
-            "moa": "HMG-CoA reductase inhibitor",
-            "final_score": 0.149,
-            "caution": true,
-            "caution_label": "Caution: limited pediatric data",
-            "scores": {
-              "bbb": 0.666,
-              "safety": 0.61,
-              "pathway_alignment": 0.0,
-              "network_proximity": 0.0,
-              "phenotypic_overlap": 0.446
-            },
-            "evidence": {
-              "top_shared_pathways": [],
-              "top_shared_hpo_terms": [
-                {
-                  "term_id": "HP:0000494",
-                  "name": "Downslanted palpebral fissures",
-                  "ic": 11.29702573013164
-                },
-                {
-                  "term_id": "HP:0002808",
-                  "name": "Kyphosis",
-                  "ic": 10.855387081621195
-                },
-                {
-                  "term_id": "HP:0000369",
-                  "name": "Low-set ears",
-                  "ic": 10.79834457129251
-                },
-                {
-                  "term_id": "HP:0011463",
-                  "name": "Childhood onset",
-                  "ic": 10.656415199860568
-                },
-                {
-                  "term_id": "HP:0003593",
-                  "name": "Infantile onset",
-                  "ic": 10.13704104076699
-                }
-              ],
-              "shared_genes": [
-                "LMNA",
-                "BRAF",
-                "FGFR2",
-                "KRAS",
-                "PTCH1",
-                "NF1",
-                "GBA1",
-                "POLG",
-                "FGFR1",
-                "FGFR3"
-              ],
-              "drug_targets": [
-                "INSIG2",
-                "HMGCR",
-                "SREBF1",
-                "MVK",
-                "SQLE",
-                "INSIG1",
-                "SREBF2",
-                "FDFT1",
-                "HMGCS1",
-                "HMGCS2",
-                "FDPS"
-              ],
-              "mean_network_distance": 10.0,
-              "hpo_confidence": "High",
-              "bbb_method": "composite",
-              "bbb_experimental_evidence": "Lipophilic statin, high CNS penetration vs. hydrophilic statins. Neuroprotective effects documented.",
-              "min_age_years": 0.0,
-              "pediatric_approved": false,
-              "pediatric_ae_rate": null
-            }
-          }
-        ],
+        "n_gate1_pass": 0,
+        "n_gate2_pass": 0,
+        "n_scored": 0,
+        "drugs": [],
         "gate1_failures": [
           {
             "drug_name": "SOMATROPIN",
             "bbb_score": 0.3
+          },
+          {
+            "drug_name": "SIMVASTATIN",
+            "bbb_score": 0.666
           },
           {
             "drug_name": "MECASERMIN",
@@ -154,9 +79,9 @@
         "hpo_similarity": 0.576,
         "pathway_similarity": 0.008,
         "n_candidates_evaluated": 9,
-        "n_gate1_pass": 7,
-        "n_gate2_pass": 5,
-        "n_scored": 5,
+        "n_gate1_pass": 5,
+        "n_gate2_pass": 4,
+        "n_scored": 4,
         "drugs": [
           {
             "drug_name": "selumetinib",
@@ -167,7 +92,7 @@
             "caution": true,
             "caution_label": "Caution: limited pediatric data",
             "scores": {
-              "bbb": 0.704,
+              "bbb": 0.88,
               "safety": 0.61,
               "pathway_alignment": 0.421,
               "network_proximity": 0.32,
@@ -221,22 +146,22 @@
                 "FBN1"
               ],
               "drug_targets": [
-                "MAP2K1",
-                "ARAF",
-                "MAPK3",
-                "MAPK1",
-                "KSR2",
-                "KSR1",
                 "RAF1",
+                "ARAF",
                 "MAP3K1",
-                "LAMTOR3",
-                "KRAS",
                 "MAP2K2",
+                "KSR1",
+                "MAPK1",
+                "MAPK3",
+                "KSR2",
+                "KRAS",
+                "MAP2K1",
+                "LAMTOR3",
                 "BRAF"
               ],
               "mean_network_distance": 2.125,
               "hpo_confidence": "High",
-              "bbb_method": "composite",
+              "bbb_method": "clinical_evidence_authoritative",
               "bbb_experimental_evidence": "FDA-approved for NF1 plexiform neurofibromas (pediatric >= 2 years). Active trials for NF1 optic pathway gliomas confirm CNS penetration. Reference: Dombi et al., 2016.",
               "min_age_years": 0.0,
               "pediatric_approved": false,
@@ -252,7 +177,7 @@
             "caution": true,
             "caution_label": "Caution: limited pediatric data",
             "scores": {
-              "bbb": 0.675,
+              "bbb": 0.82,
               "safety": 0.61,
               "pathway_alignment": 0.421,
               "network_proximity": 0.32,
@@ -306,22 +231,22 @@
                 "FBN1"
               ],
               "drug_targets": [
-                "MAP2K1",
-                "ARAF",
-                "MAPK3",
-                "MAPK1",
-                "KSR2",
-                "KSR1",
                 "RAF1",
+                "ARAF",
                 "MAP3K1",
-                "LAMTOR3",
-                "KRAS",
                 "MAP2K2",
+                "KSR1",
+                "MAPK1",
+                "MAPK3",
+                "KSR2",
+                "KRAS",
+                "MAP2K1",
+                "LAMTOR3",
                 "BRAF"
               ],
               "mean_network_distance": 2.125,
               "hpo_confidence": "High",
-              "bbb_method": "composite",
+              "bbb_method": "clinical_evidence_authoritative",
               "bbb_experimental_evidence": "CNS penetration documented in pediatric low-grade glioma trials. MEK inhibitor class with CNS activity. Reference: Fangusaro et al., 2019.",
               "min_age_years": 0.0,
               "pediatric_approved": false,
@@ -337,7 +262,7 @@
             "caution": true,
             "caution_label": "Caution: limited pediatric data",
             "scores": {
-              "bbb": 0.611,
+              "bbb": 0.9,
               "safety": 0.61,
               "pathway_alignment": 0.025,
               "network_proximity": 0.242,
@@ -385,21 +310,21 @@
                 "CREBBP"
               ],
               "drug_targets": [
+                "ACVR1",
                 "RPTOR",
-                "CALM3",
-                "MTOR",
-                "FKBP1A",
                 "PPP3R1",
-                "CALML3",
-                "MLST8",
-                "CALML6",
-                "TGFBR1",
+                "MTOR",
                 "CALML5",
-                "ACVR1"
+                "FKBP1A",
+                "CALML6",
+                "CALM3",
+                "TGFBR1",
+                "CALML3",
+                "MLST8"
               ],
               "mean_network_distance": 3.125,
               "hpo_confidence": "High",
-              "bbb_method": "composite",
+              "bbb_method": "clinical_evidence_authoritative",
               "bbb_experimental_evidence": "FDA-approved for TSC-associated SEGA and partial-onset seizures (CNS indications). CSF penetration documented. Reference: Franz et al., 2013.",
               "min_age_years": 0.0,
               "pediatric_approved": false,
@@ -415,7 +340,7 @@
             "caution": true,
             "caution_label": "Caution: limited pediatric data",
             "scores": {
-              "bbb": 0.579,
+              "bbb": 0.85,
               "safety": 0.61,
               "pathway_alignment": 0.025,
               "network_proximity": 0.242,
@@ -463,105 +388,22 @@
                 "CREBBP"
               ],
               "drug_targets": [
+                "ACVR1",
                 "RPTOR",
-                "CALM3",
-                "MTOR",
-                "FKBP1A",
                 "PPP3R1",
-                "CALML3",
-                "MLST8",
-                "CALML6",
-                "TGFBR1",
+                "MTOR",
                 "CALML5",
-                "ACVR1"
+                "FKBP1A",
+                "CALML6",
+                "CALM3",
+                "TGFBR1",
+                "CALML3",
+                "MLST8"
               ],
               "mean_network_distance": 3.125,
               "hpo_confidence": "High",
-              "bbb_method": "composite",
+              "bbb_method": "clinical_evidence_authoritative",
               "bbb_experimental_evidence": "Preclinical CNS efficacy in SYNGAP1, TSC, and NF1 mouse models. CNS exposure sufficient for mTOR inhibition at systemic doses. Reference: Bhatt et al., 2020.",
-              "min_age_years": 0.0,
-              "pediatric_approved": false,
-              "pediatric_ae_rate": null
-            }
-          },
-          {
-            "drug_name": "GANAXOLONE",
-            "chembl_id": "CHEMBL1568698",
-            "drug_phase": 3,
-            "moa": "GABA-A receptor; anion channel positive allosteric modulator",
-            "final_score": 0.155,
-            "caution": true,
-            "caution_label": "Caution: limited pediatric data",
-            "scores": {
-              "bbb": 0.569,
-              "safety": 0.61,
-              "pathway_alignment": 0.0,
-              "network_proximity": 0.0,
-              "phenotypic_overlap": 0.464
-            },
-            "evidence": {
-              "top_shared_pathways": [],
-              "top_shared_hpo_terms": [
-                {
-                  "term_id": "HP:0002521",
-                  "name": "Hypsarrhythmia",
-                  "ic": 12.755950873411484
-                },
-                {
-                  "term_id": "HP:0001328",
-                  "name": "Specific learning disability",
-                  "ic": 11.669471352686015
-                },
-                {
-                  "term_id": "HP:0000494",
-                  "name": "Downslanted palpebral fissures",
-                  "ic": 11.29702573013164
-                },
-                {
-                  "term_id": "HP:0002808",
-                  "name": "Kyphosis",
-                  "ic": 10.855387081621195
-                },
-                {
-                  "term_id": "HP:0000369",
-                  "name": "Low-set ears",
-                  "ic": 10.79834457129251
-                }
-              ],
-              "shared_genes": [
-                "FGFR2",
-                "PTCH1",
-                "FGFR1",
-                "BRAF",
-                "MAGEL2",
-                "CREBBP",
-                "FGFR3",
-                "LMNA",
-                "GLI2",
-                "SHH"
-              ],
-              "drug_targets": [
-                "GABRA6",
-                "GABRG3",
-                "GABRG1",
-                "GABRA3",
-                "GABRA5",
-                "GABRB2",
-                "GABRQ",
-                "GABRP",
-                "GABRA2",
-                "GABRB1",
-                "GABRE",
-                "GABRA1",
-                "GABRD",
-                "GABRG2",
-                "GABRA4",
-                "GABRB3"
-              ],
-              "mean_network_distance": 10.0,
-              "hpo_confidence": "High",
-              "bbb_method": "physicochemical",
-              "bbb_experimental_evidence": null,
               "min_age_years": 0.0,
               "pediatric_approved": false,
               "pediatric_ae_rate": null
@@ -569,6 +411,14 @@
           }
         ],
         "gate1_failures": [
+          {
+            "drug_name": "GANAXOLONE",
+            "bbb_score": 0.569
+          },
+          {
+            "drug_name": "BASIMGLURANT",
+            "bbb_score": 0.667
+          },
           {
             "drug_name": "imiglucerase",
             "bbb_score": 0.3
@@ -579,10 +429,6 @@
           }
         ],
         "gate2_failures": [
-          {
-            "drug_name": "BASIMGLURANT",
-            "safety_score": 0.37
-          },
           {
             "drug_name": "VIGABATRIN",
             "safety_score": 0.0
@@ -595,9 +441,9 @@
     "root_disease": "Neurofibromatosis Type 1",
     "n_layer2_diseases": 5,
     "n_total_candidates": 12,
-    "n_gate1_pass": 8,
-    "n_gate2_pass": 6,
-    "n_scored": 6,
+    "n_gate1_pass": 5,
+    "n_gate2_pass": 4,
+    "n_scored": 4,
     "global_top_drugs": [
       {
         "drug_name": "selumetinib",
@@ -608,7 +454,7 @@
         "caution": true,
         "caution_label": "Caution: limited pediatric data",
         "scores": {
-          "bbb": 0.704,
+          "bbb": 0.88,
           "safety": 0.61,
           "pathway_alignment": 0.421,
           "network_proximity": 0.32,
@@ -662,22 +508,22 @@
             "FBN1"
           ],
           "drug_targets": [
-            "MAP2K1",
-            "ARAF",
-            "MAPK3",
-            "MAPK1",
-            "KSR2",
-            "KSR1",
             "RAF1",
+            "ARAF",
             "MAP3K1",
-            "LAMTOR3",
-            "KRAS",
             "MAP2K2",
+            "KSR1",
+            "MAPK1",
+            "MAPK3",
+            "KSR2",
+            "KRAS",
+            "MAP2K1",
+            "LAMTOR3",
             "BRAF"
           ],
           "mean_network_distance": 2.125,
           "hpo_confidence": "High",
-          "bbb_method": "composite",
+          "bbb_method": "clinical_evidence_authoritative",
           "bbb_experimental_evidence": "FDA-approved for NF1 plexiform neurofibromas (pediatric >= 2 years). Active trials for NF1 optic pathway gliomas confirm CNS penetration. Reference: Dombi et al., 2016.",
           "min_age_years": 0.0,
           "pediatric_approved": false,
@@ -693,7 +539,7 @@
         "caution": true,
         "caution_label": "Caution: limited pediatric data",
         "scores": {
-          "bbb": 0.675,
+          "bbb": 0.82,
           "safety": 0.61,
           "pathway_alignment": 0.421,
           "network_proximity": 0.32,
@@ -747,22 +593,22 @@
             "FBN1"
           ],
           "drug_targets": [
-            "MAP2K1",
-            "ARAF",
-            "MAPK3",
-            "MAPK1",
-            "KSR2",
-            "KSR1",
             "RAF1",
+            "ARAF",
             "MAP3K1",
-            "LAMTOR3",
-            "KRAS",
             "MAP2K2",
+            "KSR1",
+            "MAPK1",
+            "MAPK3",
+            "KSR2",
+            "KRAS",
+            "MAP2K1",
+            "LAMTOR3",
             "BRAF"
           ],
           "mean_network_distance": 2.125,
           "hpo_confidence": "High",
-          "bbb_method": "composite",
+          "bbb_method": "clinical_evidence_authoritative",
           "bbb_experimental_evidence": "CNS penetration documented in pediatric low-grade glioma trials. MEK inhibitor class with CNS activity. Reference: Fangusaro et al., 2019.",
           "min_age_years": 0.0,
           "pediatric_approved": false,
@@ -778,7 +624,7 @@
         "caution": true,
         "caution_label": "Caution: limited pediatric data",
         "scores": {
-          "bbb": 0.611,
+          "bbb": 0.9,
           "safety": 0.61,
           "pathway_alignment": 0.025,
           "network_proximity": 0.242,
@@ -826,21 +672,21 @@
             "CREBBP"
           ],
           "drug_targets": [
+            "ACVR1",
             "RPTOR",
-            "CALM3",
-            "MTOR",
-            "FKBP1A",
             "PPP3R1",
-            "CALML3",
-            "MLST8",
-            "CALML6",
-            "TGFBR1",
+            "MTOR",
             "CALML5",
-            "ACVR1"
+            "FKBP1A",
+            "CALML6",
+            "CALM3",
+            "TGFBR1",
+            "CALML3",
+            "MLST8"
           ],
           "mean_network_distance": 3.125,
           "hpo_confidence": "High",
-          "bbb_method": "composite",
+          "bbb_method": "clinical_evidence_authoritative",
           "bbb_experimental_evidence": "FDA-approved for TSC-associated SEGA and partial-onset seizures (CNS indications). CSF penetration documented. Reference: Franz et al., 2013.",
           "min_age_years": 0.0,
           "pediatric_approved": false,
@@ -856,7 +702,7 @@
         "caution": true,
         "caution_label": "Caution: limited pediatric data",
         "scores": {
-          "bbb": 0.579,
+          "bbb": 0.85,
           "safety": 0.61,
           "pathway_alignment": 0.025,
           "network_proximity": 0.242,
@@ -904,183 +750,22 @@
             "CREBBP"
           ],
           "drug_targets": [
+            "ACVR1",
             "RPTOR",
-            "CALM3",
-            "MTOR",
-            "FKBP1A",
             "PPP3R1",
-            "CALML3",
-            "MLST8",
-            "CALML6",
-            "TGFBR1",
+            "MTOR",
             "CALML5",
-            "ACVR1"
+            "FKBP1A",
+            "CALML6",
+            "CALM3",
+            "TGFBR1",
+            "CALML3",
+            "MLST8"
           ],
           "mean_network_distance": 3.125,
           "hpo_confidence": "High",
-          "bbb_method": "composite",
+          "bbb_method": "clinical_evidence_authoritative",
           "bbb_experimental_evidence": "Preclinical CNS efficacy in SYNGAP1, TSC, and NF1 mouse models. CNS exposure sufficient for mTOR inhibition at systemic doses. Reference: Bhatt et al., 2020.",
-          "min_age_years": 0.0,
-          "pediatric_approved": false,
-          "pediatric_ae_rate": null
-        }
-      },
-      {
-        "drug_name": "GANAXOLONE",
-        "chembl_id": "CHEMBL1568698",
-        "drug_phase": 3,
-        "moa": "GABA-A receptor; anion channel positive allosteric modulator",
-        "final_score": 0.155,
-        "caution": true,
-        "caution_label": "Caution: limited pediatric data",
-        "scores": {
-          "bbb": 0.569,
-          "safety": 0.61,
-          "pathway_alignment": 0.0,
-          "network_proximity": 0.0,
-          "phenotypic_overlap": 0.464
-        },
-        "evidence": {
-          "top_shared_pathways": [],
-          "top_shared_hpo_terms": [
-            {
-              "term_id": "HP:0002521",
-              "name": "Hypsarrhythmia",
-              "ic": 12.755950873411484
-            },
-            {
-              "term_id": "HP:0001328",
-              "name": "Specific learning disability",
-              "ic": 11.669471352686015
-            },
-            {
-              "term_id": "HP:0000494",
-              "name": "Downslanted palpebral fissures",
-              "ic": 11.29702573013164
-            },
-            {
-              "term_id": "HP:0002808",
-              "name": "Kyphosis",
-              "ic": 10.855387081621195
-            },
-            {
-              "term_id": "HP:0000369",
-              "name": "Low-set ears",
-              "ic": 10.79834457129251
-            }
-          ],
-          "shared_genes": [
-            "FGFR2",
-            "PTCH1",
-            "FGFR1",
-            "BRAF",
-            "MAGEL2",
-            "CREBBP",
-            "FGFR3",
-            "LMNA",
-            "GLI2",
-            "SHH"
-          ],
-          "drug_targets": [
-            "GABRA6",
-            "GABRG3",
-            "GABRG1",
-            "GABRA3",
-            "GABRA5",
-            "GABRB2",
-            "GABRQ",
-            "GABRP",
-            "GABRA2",
-            "GABRB1",
-            "GABRE",
-            "GABRA1",
-            "GABRD",
-            "GABRG2",
-            "GABRA4",
-            "GABRB3"
-          ],
-          "mean_network_distance": 10.0,
-          "hpo_confidence": "High",
-          "bbb_method": "physicochemical",
-          "bbb_experimental_evidence": null,
-          "min_age_years": 0.0,
-          "pediatric_approved": false,
-          "pediatric_ae_rate": null
-        }
-      },
-      {
-        "drug_name": "SIMVASTATIN",
-        "chembl_id": "CHEMBL1064",
-        "drug_phase": 3,
-        "moa": "HMG-CoA reductase inhibitor",
-        "final_score": 0.149,
-        "caution": true,
-        "caution_label": "Caution: limited pediatric data",
-        "scores": {
-          "bbb": 0.666,
-          "safety": 0.61,
-          "pathway_alignment": 0.0,
-          "network_proximity": 0.0,
-          "phenotypic_overlap": 0.446
-        },
-        "evidence": {
-          "top_shared_pathways": [],
-          "top_shared_hpo_terms": [
-            {
-              "term_id": "HP:0000494",
-              "name": "Downslanted palpebral fissures",
-              "ic": 11.29702573013164
-            },
-            {
-              "term_id": "HP:0002808",
-              "name": "Kyphosis",
-              "ic": 10.855387081621195
-            },
-            {
-              "term_id": "HP:0000369",
-              "name": "Low-set ears",
-              "ic": 10.79834457129251
-            },
-            {
-              "term_id": "HP:0011463",
-              "name": "Childhood onset",
-              "ic": 10.656415199860568
-            },
-            {
-              "term_id": "HP:0003593",
-              "name": "Infantile onset",
-              "ic": 10.13704104076699
-            }
-          ],
-          "shared_genes": [
-            "LMNA",
-            "BRAF",
-            "FGFR2",
-            "KRAS",
-            "PTCH1",
-            "NF1",
-            "GBA1",
-            "POLG",
-            "FGFR1",
-            "FGFR3"
-          ],
-          "drug_targets": [
-            "INSIG2",
-            "HMGCR",
-            "SREBF1",
-            "MVK",
-            "SQLE",
-            "INSIG1",
-            "SREBF2",
-            "FDFT1",
-            "HMGCS1",
-            "HMGCS2",
-            "FDPS"
-          ],
-          "mean_network_distance": 10.0,
-          "hpo_confidence": "High",
-          "bbb_method": "composite",
-          "bbb_experimental_evidence": "Lipophilic statin, high CNS penetration vs. hydrophilic statins. Neuroprotective effects documented.",
           "min_age_years": 0.0,
           "pediatric_approved": false,
           "pediatric_ae_rate": null

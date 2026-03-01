@@ -1,0 +1,1449 @@
+{
+  "root": {
+    "disease": "SYNGAP1-Related Disorders",
+    "omim_ids": [
+      "612621"
+    ],
+    "genes": [
+      "SYNGAP1"
+    ],
+    "layer2": [
+      {
+        "disease": "Angelman Syndrome",
+        "overlap_score_to_root": 0.505,
+        "hpo_similarity": 0.562,
+        "pathway_similarity": 0.0,
+        "n_candidates_evaluated": 4,
+        "n_gate1_pass": 1,
+        "n_gate2_pass": 0,
+        "n_scored": 0,
+        "drugs": [],
+        "gate1_failures": [
+          {
+            "drug_name": "LEVODOPA",
+            "bbb_score": 0.625
+          },
+          {
+            "drug_name": "CARBIDOPA",
+            "bbb_score": 0.625
+          },
+          {
+            "drug_name": "CARBIDOPA ANHYDROUS",
+            "bbb_score": 0.625
+          }
+        ],
+        "gate2_failures": [
+          {
+            "drug_name": "GABOXADOL",
+            "safety_score": 0.37
+          }
+        ]
+      },
+      {
+        "disease": "Neurofibromatosis Type 1",
+        "overlap_score_to_root": 0.471,
+        "hpo_similarity": 0.459,
+        "pathway_similarity": 0.116,
+        "n_candidates_evaluated": 17,
+        "n_gate1_pass": 3,
+        "n_gate2_pass": 3,
+        "n_scored": 3,
+        "drugs": [
+          {
+            "drug_name": "SELUMETINIB",
+            "chembl_id": "CHEMBL1614701",
+            "drug_phase": 2,
+            "moa": "Dual specificity mitogen-activated protein kinase kinase; MEK1/2 inhibitor",
+            "final_score": 0.271,
+            "caution": true,
+            "caution_label": "Caution: limited pediatric data",
+            "scores": {
+              "bbb": 0.88,
+              "safety": 0.61,
+              "pathway_alignment": 0.038,
+              "network_proximity": 0.333,
+              "phenotypic_overlap": 0.442
+            },
+            "evidence": {
+              "top_shared_pathways": [
+                "Regulation of RAS by GAPs"
+              ],
+              "top_shared_hpo_terms": [
+                {
+                  "term_id": "HP:0002376",
+                  "name": "Developmental regression",
+                  "ic": 11.517730591279307
+                },
+                {
+                  "term_id": "HP:0000729",
+                  "name": "Autistic behavior",
+                  "ic": 10.659016995048848
+                },
+                {
+                  "term_id": "HP:0003593",
+                  "name": "Infantile onset",
+                  "ic": 10.13704104076699
+                },
+                {
+                  "term_id": "HP:0000252",
+                  "name": "Microcephaly",
+                  "ic": 9.48620139949008
+                },
+                {
+                  "term_id": "HP:0001270",
+                  "name": "Motor delay",
+                  "ic": 9.482740314165419
+                }
+              ],
+              "shared_genes": [
+                "BRAF",
+                "KRAS",
+                "FGFR2",
+                "FGFR1",
+                "LMNA",
+                "PIK3CA",
+                "PTCH1",
+                "FGFR3",
+                "FLNA",
+                "MAGEL2"
+              ],
+              "drug_targets": [
+                "LAMTOR3",
+                "MAP3K1",
+                "BRAF",
+                "KSR2",
+                "ARAF",
+                "KSR1",
+                "MAPK1",
+                "MAP2K1",
+                "MAPK3",
+                "KRAS",
+                "MAP2K2",
+                "RAF1"
+              ],
+              "mean_network_distance": 2.0,
+              "hpo_confidence": "High",
+              "scoring_method": "magnitude_aware_cosine",
+              "bbb_method": "clinical_evidence_authoritative",
+              "bbb_experimental_evidence": "FDA-approved for NF1 plexiform neurofibromas (pediatric >= 2 years). Active trials for NF1 optic pathway gliomas confirm CNS penetration. Reference: Dombi et al., 2016.",
+              "min_age_years": 0.0,
+              "pediatric_approved": false,
+              "pediatric_ae_rate": null
+            }
+          },
+          {
+            "drug_name": "EVEROLIMUS",
+            "chembl_id": "CHEMBL1908360",
+            "drug_phase": 2,
+            "moa": "FK506-binding protein 1A inhibitor",
+            "final_score": 0.256,
+            "caution": true,
+            "caution_label": "Caution: limited pediatric data",
+            "scores": {
+              "bbb": 0.9,
+              "safety": 0.61,
+              "pathway_alignment": 0.0,
+              "network_proximity": 0.333,
+              "phenotypic_overlap": 0.435
+            },
+            "evidence": {
+              "top_shared_pathways": [],
+              "top_shared_hpo_terms": [
+                {
+                  "term_id": "HP:0000729",
+                  "name": "Autistic behavior",
+                  "ic": 10.659016995048848
+                },
+                {
+                  "term_id": "HP:0003593",
+                  "name": "Infantile onset",
+                  "ic": 10.13704104076699
+                },
+                {
+                  "term_id": "HP:0002353",
+                  "name": "EEG abnormality",
+                  "ic": 9.228760710963495
+                },
+                {
+                  "term_id": "HP:0000006",
+                  "name": "Autosomal dominant inheritance",
+                  "ic": 9.2181703094204
+                },
+                {
+                  "term_id": "HP:0000486",
+                  "name": "Strabismus",
+                  "ic": 9.106979132768554
+                }
+              ],
+              "shared_genes": [
+                "FGFR2",
+                "FBN1",
+                "FLNA",
+                "FGFR3",
+                "BRAF",
+                "COL2A1",
+                "LMNA",
+                "FGFR1",
+                "PTCH1",
+                "CREBBP"
+              ],
+              "drug_targets": [
+                "MTOR",
+                "TGFBR1",
+                "FKBP1A",
+                "CALML3",
+                "CALML5",
+                "CALML6",
+                "PPP3R1",
+                "CALM3",
+                "RPTOR",
+                "ACVR1",
+                "MLST8"
+              ],
+              "mean_network_distance": 2.0,
+              "hpo_confidence": "High",
+              "scoring_method": "magnitude_aware_cosine",
+              "bbb_method": "clinical_evidence_authoritative",
+              "bbb_experimental_evidence": "FDA-approved for TSC-associated SEGA and partial-onset seizures (CNS indications). CSF penetration documented. Reference: Franz et al., 2013.",
+              "min_age_years": 0.0,
+              "pediatric_approved": false,
+              "pediatric_ae_rate": null
+            }
+          },
+          {
+            "drug_name": "SIROLIMUS",
+            "chembl_id": "CHEMBL413",
+            "drug_phase": 2,
+            "moa": "FK506-binding protein 1A inhibitor",
+            "final_score": 0.256,
+            "caution": true,
+            "caution_label": "Caution: limited pediatric data",
+            "scores": {
+              "bbb": 0.85,
+              "safety": 0.61,
+              "pathway_alignment": 0.0,
+              "network_proximity": 0.333,
+              "phenotypic_overlap": 0.435
+            },
+            "evidence": {
+              "top_shared_pathways": [],
+              "top_shared_hpo_terms": [
+                {
+                  "term_id": "HP:0000729",
+                  "name": "Autistic behavior",
+                  "ic": 10.659016995048848
+                },
+                {
+                  "term_id": "HP:0003593",
+                  "name": "Infantile onset",
+                  "ic": 10.13704104076699
+                },
+                {
+                  "term_id": "HP:0002353",
+                  "name": "EEG abnormality",
+                  "ic": 9.228760710963495
+                },
+                {
+                  "term_id": "HP:0000006",
+                  "name": "Autosomal dominant inheritance",
+                  "ic": 9.2181703094204
+                },
+                {
+                  "term_id": "HP:0000486",
+                  "name": "Strabismus",
+                  "ic": 9.106979132768554
+                }
+              ],
+              "shared_genes": [
+                "FGFR2",
+                "FBN1",
+                "FLNA",
+                "FGFR3",
+                "BRAF",
+                "COL2A1",
+                "LMNA",
+                "FGFR1",
+                "PTCH1",
+                "CREBBP"
+              ],
+              "drug_targets": [
+                "MTOR",
+                "TGFBR1",
+                "FKBP1A",
+                "CALML3",
+                "CALML5",
+                "CALML6",
+                "PPP3R1",
+                "CALM3",
+                "RPTOR",
+                "ACVR1",
+                "MLST8"
+              ],
+              "mean_network_distance": 2.0,
+              "hpo_confidence": "High",
+              "scoring_method": "magnitude_aware_cosine",
+              "bbb_method": "clinical_evidence_authoritative",
+              "bbb_experimental_evidence": "Preclinical CNS efficacy in SYNGAP1, TSC, and NF1 mouse models. CNS exposure sufficient for mTOR inhibition at systemic doses. Reference: Bhatt et al., 2020.",
+              "min_age_years": 0.0,
+              "pediatric_approved": false,
+              "pediatric_ae_rate": null
+            }
+          }
+        ],
+        "gate1_failures": [
+          {
+            "drug_name": "SELUMETINIB SULFATE",
+            "bbb_score": 0.234
+          },
+          {
+            "drug_name": "PEGINTERFERON ALFA-2B",
+            "bbb_score": 0.3
+          },
+          {
+            "drug_name": "VINBLASTINE",
+            "bbb_score": 0.24
+          },
+          {
+            "drug_name": "IMATINIB MESYLATE",
+            "bbb_score": 0.234
+          },
+          {
+            "drug_name": "METHOTREXATE",
+            "bbb_score": 0.41
+          },
+          {
+            "drug_name": "VINCRISTINE SULFATE",
+            "bbb_score": 0.234
+          },
+          {
+            "drug_name": "LOVASTATIN",
+            "bbb_score": 0.669
+          },
+          {
+            "drug_name": "MIRDAMETINIB",
+            "bbb_score": 0.35
+          },
+          {
+            "drug_name": "LAMOTRIGINE",
+            "bbb_score": 0.681
+          },
+          {
+            "drug_name": "VINCRISTINE",
+            "bbb_score": 0.26
+          },
+          {
+            "drug_name": "IMATINIB",
+            "bbb_score": 0.25
+          },
+          {
+            "drug_name": "CHOLECALCIFEROL",
+            "bbb_score": 0.54
+          },
+          {
+            "drug_name": "CELECOXIB",
+            "bbb_score": 0.622
+          },
+          {
+            "drug_name": "ABEMACICLIB",
+            "bbb_score": 0.382
+          }
+        ],
+        "gate2_failures": []
+      },
+      {
+        "disease": "Rett Syndrome",
+        "overlap_score_to_root": 0.463,
+        "hpo_similarity": 0.49,
+        "pathway_similarity": 0.0,
+        "n_candidates_evaluated": 14,
+        "n_gate1_pass": 4,
+        "n_gate2_pass": 2,
+        "n_scored": 2,
+        "drugs": [
+          {
+            "drug_name": "KETAMINE",
+            "chembl_id": "CHEMBL742",
+            "drug_phase": 2,
+            "moa": "Glutamate [NMDA] receptor negative allosteric modulator",
+            "final_score": 0.29,
+            "caution": true,
+            "caution_label": "Caution: limited pediatric data",
+            "scores": {
+              "bbb": 0.96,
+              "safety": 0.61,
+              "pathway_alignment": 0.014,
+              "network_proximity": 0.35,
+              "phenotypic_overlap": 0.506
+            },
+            "evidence": {
+              "top_shared_pathways": [],
+              "top_shared_hpo_terms": [
+                {
+                  "term_id": "HP:0011150",
+                  "name": "Myoclonic absence seizure",
+                  "ic": 16.772759161098037
+                },
+                {
+                  "term_id": "HP:0200134",
+                  "name": "Epileptic encephalopathy",
+                  "ic": 13.487356942235788
+                },
+                {
+                  "term_id": "HP:0002307",
+                  "name": "Drooling",
+                  "ic": 13.100333819126542
+                },
+                {
+                  "term_id": "HP:0002342",
+                  "name": "Moderate intellectual disability",
+                  "ic": 12.859869824868076
+                },
+                {
+                  "term_id": "HP:0002376",
+                  "name": "Developmental regression",
+                  "ic": 11.517730591279307
+                }
+              ],
+              "shared_genes": [
+                "MAGEL2",
+                "PTCH1",
+                "FGFR2",
+                "SNRPN",
+                "FGFR1",
+                "GRIN1",
+                "SCN2A",
+                "SCN1A",
+                "GLI2",
+                "STIL"
+              ],
+              "drug_targets": [
+                "GRIN3A",
+                "GRIN2D",
+                "GRIN2A",
+                "GRIN2C",
+                "GRIN2B",
+                "GRIN3B",
+                "GRIN1"
+              ],
+              "mean_network_distance": 1.857,
+              "hpo_confidence": "High",
+              "scoring_method": "magnitude_aware_cosine",
+              "bbb_method": "clinical_evidence_authoritative",
+              "bbb_experimental_evidence": "Anesthetic/CNS drug with primary CNS target.",
+              "min_age_years": 0.0,
+              "pediatric_approved": false,
+              "pediatric_ae_rate": null
+            }
+          },
+          {
+            "drug_name": "RISPERIDONE",
+            "chembl_id": "CHEMBL85",
+            "drug_phase": 3,
+            "moa": "Serotonin 2a (5-HT2a) receptor antagonist",
+            "final_score": 0.273,
+            "caution": true,
+            "caution_label": "Caution: limited pediatric data",
+            "scores": {
+              "bbb": 0.871,
+              "safety": 0.61,
+              "pathway_alignment": 0.004,
+              "network_proximity": 0.333,
+              "phenotypic_overlap": 0.482
+            },
+            "evidence": {
+              "top_shared_pathways": [],
+              "top_shared_hpo_terms": [
+                {
+                  "term_id": "HP:0000473",
+                  "name": "Torticollis",
+                  "ic": 13.830244655758797
+                },
+                {
+                  "term_id": "HP:0002376",
+                  "name": "Developmental regression",
+                  "ic": 11.517730591279307
+                },
+                {
+                  "term_id": "HP:0002069",
+                  "name": "Bilateral tonic-clonic seizure",
+                  "ic": 11.2629841567711
+                },
+                {
+                  "term_id": "HP:0000729",
+                  "name": "Autistic behavior",
+                  "ic": 10.659016995048848
+                },
+                {
+                  "term_id": "HP:0003593",
+                  "name": "Infantile onset",
+                  "ic": 10.13704104076699
+                }
+              ],
+              "shared_genes": [
+                "PTCH1",
+                "GLI2",
+                "FGFR1",
+                "STIL",
+                "SIX3",
+                "PIK3CA",
+                "SHH",
+                "ZIC2",
+                "SCN1A",
+                "BRAF"
+              ],
+              "drug_targets": [
+                "GNAI2",
+                "GNAQ",
+                "DRD2",
+                "ADORA2A",
+                "SLC6A3",
+                "HTR2C",
+                "ARRB2",
+                "HTR2A",
+                "GNB1",
+                "CNR1",
+                "GRM2",
+                "GNAI1",
+                "NCS1"
+              ],
+              "mean_network_distance": 2.0,
+              "hpo_confidence": "High",
+              "scoring_method": "magnitude_aware_cosine",
+              "bbb_method": "physicochemical",
+              "bbb_experimental_evidence": null,
+              "min_age_years": 0.0,
+              "pediatric_approved": false,
+              "pediatric_ae_rate": null
+            }
+          }
+        ],
+        "gate1_failures": [
+          {
+            "drug_name": "DONEPEZIL HYDROCHLORIDE",
+            "bbb_score": 0.669
+          },
+          {
+            "drug_name": "CANNABIDIOL",
+            "bbb_score": 0.514
+          },
+          {
+            "drug_name": "DONEPEZIL",
+            "bbb_score": 0.677
+          },
+          {
+            "drug_name": "MECASERMIN",
+            "bbb_score": 0.3
+          },
+          {
+            "drug_name": "VATIQUINONE",
+            "bbb_score": 0.473
+          },
+          {
+            "drug_name": "SARIZOTAN",
+            "bbb_score": 0.678
+          },
+          {
+            "drug_name": "LOVASTATIN",
+            "bbb_score": 0.669
+          },
+          {
+            "drug_name": "DESIPRAMINE",
+            "bbb_score": 0.578
+          },
+          {
+            "drug_name": "FINGOLIMOD",
+            "bbb_score": 0.514
+          },
+          {
+            "drug_name": "ESKETAMINE HYDROCHLORIDE",
+            "bbb_score": 0.681
+          }
+        ],
+        "gate2_failures": [
+          {
+            "drug_name": "DEXTROMETHORPHAN",
+            "safety_score": 0.37
+          },
+          {
+            "drug_name": "ESKETAMINE",
+            "safety_score": 0.0
+          }
+        ]
+      },
+      {
+        "disease": "Fragile X Syndrome",
+        "overlap_score_to_root": 0.459,
+        "hpo_similarity": 0.484,
+        "pathway_similarity": 0.0,
+        "n_candidates_evaluated": 10,
+        "n_gate1_pass": 1,
+        "n_gate2_pass": 0,
+        "n_scored": 0,
+        "drugs": [],
+        "gate1_failures": [
+          {
+            "drug_name": "CANNABIDIOL",
+            "bbb_score": 0.514
+          },
+          {
+            "drug_name": "ZATOLMILAST",
+            "bbb_score": 0.515
+          },
+          {
+            "drug_name": "ARIPIPRAZOLE",
+            "bbb_score": 0.498
+          },
+          {
+            "drug_name": "ACAMPROSATE",
+            "bbb_score": 0.681
+          },
+          {
+            "drug_name": "METFORMIN",
+            "bbb_score": 0.674
+          },
+          {
+            "drug_name": "GANAXOLONE",
+            "bbb_score": 0.569
+          },
+          {
+            "drug_name": "SULINDAC",
+            "bbb_score": 0.719
+          },
+          {
+            "drug_name": "ROFLUMILAST",
+            "bbb_score": 0.549
+          },
+          {
+            "drug_name": "ERGOLOID MESYLATES",
+            "bbb_score": 0.266
+          }
+        ],
+        "gate2_failures": [
+          {
+            "drug_name": "ARBACLOFEN",
+            "safety_score": 0.37
+          }
+        ]
+      },
+      {
+        "disease": "Tuberous Sclerosis Complex",
+        "overlap_score_to_root": 0.435,
+        "hpo_similarity": 0.466,
+        "pathway_similarity": 0.004,
+        "n_candidates_evaluated": 6,
+        "n_gate1_pass": 3,
+        "n_gate2_pass": 2,
+        "n_scored": 2,
+        "drugs": [
+          {
+            "drug_name": "EVEROLIMUS",
+            "chembl_id": "CHEMBL1908360",
+            "drug_phase": 4,
+            "moa": "FK506-binding protein 1A inhibitor",
+            "final_score": 0.256,
+            "caution": true,
+            "caution_label": "Caution: limited pediatric data",
+            "scores": {
+              "bbb": 0.9,
+              "safety": 0.61,
+              "pathway_alignment": 0.0,
+              "network_proximity": 0.333,
+              "phenotypic_overlap": 0.435
+            },
+            "evidence": {
+              "top_shared_pathways": [],
+              "top_shared_hpo_terms": [
+                {
+                  "term_id": "HP:0000729",
+                  "name": "Autistic behavior",
+                  "ic": 10.659016995048848
+                },
+                {
+                  "term_id": "HP:0003593",
+                  "name": "Infantile onset",
+                  "ic": 10.13704104076699
+                },
+                {
+                  "term_id": "HP:0002353",
+                  "name": "EEG abnormality",
+                  "ic": 9.228760710963495
+                },
+                {
+                  "term_id": "HP:0000006",
+                  "name": "Autosomal dominant inheritance",
+                  "ic": 9.2181703094204
+                },
+                {
+                  "term_id": "HP:0000486",
+                  "name": "Strabismus",
+                  "ic": 9.106979132768554
+                }
+              ],
+              "shared_genes": [
+                "FGFR2",
+                "FBN1",
+                "FLNA",
+                "FGFR3",
+                "BRAF",
+                "COL2A1",
+                "LMNA",
+                "FGFR1",
+                "PTCH1",
+                "CREBBP"
+              ],
+              "drug_targets": [
+                "MTOR",
+                "TGFBR1",
+                "FKBP1A",
+                "CALML3",
+                "CALML5",
+                "CALML6",
+                "PPP3R1",
+                "CALM3",
+                "RPTOR",
+                "ACVR1",
+                "MLST8"
+              ],
+              "mean_network_distance": 2.0,
+              "hpo_confidence": "High",
+              "scoring_method": "magnitude_aware_cosine",
+              "bbb_method": "clinical_evidence_authoritative",
+              "bbb_experimental_evidence": "FDA-approved for TSC-associated SEGA and partial-onset seizures (CNS indications). CSF penetration documented. Reference: Franz et al., 2013.",
+              "min_age_years": 0.0,
+              "pediatric_approved": false,
+              "pediatric_ae_rate": null
+            }
+          },
+          {
+            "drug_name": "SIROLIMUS",
+            "chembl_id": "CHEMBL413",
+            "drug_phase": 3,
+            "moa": "FK506-binding protein 1A inhibitor",
+            "final_score": 0.256,
+            "caution": true,
+            "caution_label": "Caution: limited pediatric data",
+            "scores": {
+              "bbb": 0.85,
+              "safety": 0.61,
+              "pathway_alignment": 0.0,
+              "network_proximity": 0.333,
+              "phenotypic_overlap": 0.435
+            },
+            "evidence": {
+              "top_shared_pathways": [],
+              "top_shared_hpo_terms": [
+                {
+                  "term_id": "HP:0000729",
+                  "name": "Autistic behavior",
+                  "ic": 10.659016995048848
+                },
+                {
+                  "term_id": "HP:0003593",
+                  "name": "Infantile onset",
+                  "ic": 10.13704104076699
+                },
+                {
+                  "term_id": "HP:0002353",
+                  "name": "EEG abnormality",
+                  "ic": 9.228760710963495
+                },
+                {
+                  "term_id": "HP:0000006",
+                  "name": "Autosomal dominant inheritance",
+                  "ic": 9.2181703094204
+                },
+                {
+                  "term_id": "HP:0000486",
+                  "name": "Strabismus",
+                  "ic": 9.106979132768554
+                }
+              ],
+              "shared_genes": [
+                "FGFR2",
+                "FBN1",
+                "FLNA",
+                "FGFR3",
+                "BRAF",
+                "COL2A1",
+                "LMNA",
+                "FGFR1",
+                "PTCH1",
+                "CREBBP"
+              ],
+              "drug_targets": [
+                "MTOR",
+                "TGFBR1",
+                "FKBP1A",
+                "CALML3",
+                "CALML5",
+                "CALML6",
+                "PPP3R1",
+                "CALM3",
+                "RPTOR",
+                "ACVR1",
+                "MLST8"
+              ],
+              "mean_network_distance": 2.0,
+              "hpo_confidence": "High",
+              "scoring_method": "magnitude_aware_cosine",
+              "bbb_method": "clinical_evidence_authoritative",
+              "bbb_experimental_evidence": "Preclinical CNS efficacy in SYNGAP1, TSC, and NF1 mouse models. CNS exposure sufficient for mTOR inhibition at systemic doses. Reference: Bhatt et al., 2020.",
+              "min_age_years": 0.0,
+              "pediatric_approved": false,
+              "pediatric_ae_rate": null
+            }
+          }
+        ],
+        "gate1_failures": [
+          {
+            "drug_name": "GANAXOLONE",
+            "bbb_score": 0.569
+          },
+          {
+            "drug_name": "BASIMGLURANT",
+            "bbb_score": 0.667
+          },
+          {
+            "drug_name": "imiglucerase",
+            "bbb_score": 0.3
+          }
+        ],
+        "gate2_failures": [
+          {
+            "drug_name": "VIGABATRIN",
+            "safety_score": 0.0
+          }
+        ]
+      }
+    ]
+  },
+  "summary": {
+    "root_disease": "SYNGAP1-Related Disorders",
+    "n_layer2_diseases": 5,
+    "n_total_candidates": 51,
+    "n_gate1_pass": 12,
+    "n_gate2_pass": 7,
+    "n_scored": 7,
+    "global_top_drugs": [
+      {
+        "drug_name": "KETAMINE",
+        "chembl_id": "CHEMBL742",
+        "drug_phase": 2,
+        "moa": "Glutamate [NMDA] receptor negative allosteric modulator",
+        "final_score": 0.29,
+        "caution": true,
+        "caution_label": "Caution: limited pediatric data",
+        "scores": {
+          "bbb": 0.96,
+          "safety": 0.61,
+          "pathway_alignment": 0.014,
+          "network_proximity": 0.35,
+          "phenotypic_overlap": 0.506
+        },
+        "evidence": {
+          "top_shared_pathways": [],
+          "top_shared_hpo_terms": [
+            {
+              "term_id": "HP:0011150",
+              "name": "Myoclonic absence seizure",
+              "ic": 16.772759161098037
+            },
+            {
+              "term_id": "HP:0200134",
+              "name": "Epileptic encephalopathy",
+              "ic": 13.487356942235788
+            },
+            {
+              "term_id": "HP:0002307",
+              "name": "Drooling",
+              "ic": 13.100333819126542
+            },
+            {
+              "term_id": "HP:0002342",
+              "name": "Moderate intellectual disability",
+              "ic": 12.859869824868076
+            },
+            {
+              "term_id": "HP:0002376",
+              "name": "Developmental regression",
+              "ic": 11.517730591279307
+            }
+          ],
+          "shared_genes": [
+            "MAGEL2",
+            "PTCH1",
+            "FGFR2",
+            "SNRPN",
+            "FGFR1",
+            "GRIN1",
+            "SCN2A",
+            "SCN1A",
+            "GLI2",
+            "STIL"
+          ],
+          "drug_targets": [
+            "GRIN3A",
+            "GRIN2D",
+            "GRIN2A",
+            "GRIN2C",
+            "GRIN2B",
+            "GRIN3B",
+            "GRIN1"
+          ],
+          "mean_network_distance": 1.857,
+          "hpo_confidence": "High",
+          "scoring_method": "magnitude_aware_cosine",
+          "bbb_method": "clinical_evidence_authoritative",
+          "bbb_experimental_evidence": "Anesthetic/CNS drug with primary CNS target.",
+          "min_age_years": 0.0,
+          "pediatric_approved": false,
+          "pediatric_ae_rate": null
+        }
+      },
+      {
+        "drug_name": "RISPERIDONE",
+        "chembl_id": "CHEMBL85",
+        "drug_phase": 3,
+        "moa": "Serotonin 2a (5-HT2a) receptor antagonist",
+        "final_score": 0.273,
+        "caution": true,
+        "caution_label": "Caution: limited pediatric data",
+        "scores": {
+          "bbb": 0.871,
+          "safety": 0.61,
+          "pathway_alignment": 0.004,
+          "network_proximity": 0.333,
+          "phenotypic_overlap": 0.482
+        },
+        "evidence": {
+          "top_shared_pathways": [],
+          "top_shared_hpo_terms": [
+            {
+              "term_id": "HP:0000473",
+              "name": "Torticollis",
+              "ic": 13.830244655758797
+            },
+            {
+              "term_id": "HP:0002376",
+              "name": "Developmental regression",
+              "ic": 11.517730591279307
+            },
+            {
+              "term_id": "HP:0002069",
+              "name": "Bilateral tonic-clonic seizure",
+              "ic": 11.2629841567711
+            },
+            {
+              "term_id": "HP:0000729",
+              "name": "Autistic behavior",
+              "ic": 10.659016995048848
+            },
+            {
+              "term_id": "HP:0003593",
+              "name": "Infantile onset",
+              "ic": 10.13704104076699
+            }
+          ],
+          "shared_genes": [
+            "PTCH1",
+            "GLI2",
+            "FGFR1",
+            "STIL",
+            "SIX3",
+            "PIK3CA",
+            "SHH",
+            "ZIC2",
+            "SCN1A",
+            "BRAF"
+          ],
+          "drug_targets": [
+            "GNAI2",
+            "GNAQ",
+            "DRD2",
+            "ADORA2A",
+            "SLC6A3",
+            "HTR2C",
+            "ARRB2",
+            "HTR2A",
+            "GNB1",
+            "CNR1",
+            "GRM2",
+            "GNAI1",
+            "NCS1"
+          ],
+          "mean_network_distance": 2.0,
+          "hpo_confidence": "High",
+          "scoring_method": "magnitude_aware_cosine",
+          "bbb_method": "physicochemical",
+          "bbb_experimental_evidence": null,
+          "min_age_years": 0.0,
+          "pediatric_approved": false,
+          "pediatric_ae_rate": null
+        }
+      },
+      {
+        "drug_name": "SELUMETINIB",
+        "chembl_id": "CHEMBL1614701",
+        "drug_phase": 2,
+        "moa": "Dual specificity mitogen-activated protein kinase kinase; MEK1/2 inhibitor",
+        "final_score": 0.271,
+        "caution": true,
+        "caution_label": "Caution: limited pediatric data",
+        "scores": {
+          "bbb": 0.88,
+          "safety": 0.61,
+          "pathway_alignment": 0.038,
+          "network_proximity": 0.333,
+          "phenotypic_overlap": 0.442
+        },
+        "evidence": {
+          "top_shared_pathways": [
+            "Regulation of RAS by GAPs"
+          ],
+          "top_shared_hpo_terms": [
+            {
+              "term_id": "HP:0002376",
+              "name": "Developmental regression",
+              "ic": 11.517730591279307
+            },
+            {
+              "term_id": "HP:0000729",
+              "name": "Autistic behavior",
+              "ic": 10.659016995048848
+            },
+            {
+              "term_id": "HP:0003593",
+              "name": "Infantile onset",
+              "ic": 10.13704104076699
+            },
+            {
+              "term_id": "HP:0000252",
+              "name": "Microcephaly",
+              "ic": 9.48620139949008
+            },
+            {
+              "term_id": "HP:0001270",
+              "name": "Motor delay",
+              "ic": 9.482740314165419
+            }
+          ],
+          "shared_genes": [
+            "BRAF",
+            "KRAS",
+            "FGFR2",
+            "FGFR1",
+            "LMNA",
+            "PIK3CA",
+            "PTCH1",
+            "FGFR3",
+            "FLNA",
+            "MAGEL2"
+          ],
+          "drug_targets": [
+            "LAMTOR3",
+            "MAP3K1",
+            "BRAF",
+            "KSR2",
+            "ARAF",
+            "KSR1",
+            "MAPK1",
+            "MAP2K1",
+            "MAPK3",
+            "KRAS",
+            "MAP2K2",
+            "RAF1"
+          ],
+          "mean_network_distance": 2.0,
+          "hpo_confidence": "High",
+          "scoring_method": "magnitude_aware_cosine",
+          "bbb_method": "clinical_evidence_authoritative",
+          "bbb_experimental_evidence": "FDA-approved for NF1 plexiform neurofibromas (pediatric >= 2 years). Active trials for NF1 optic pathway gliomas confirm CNS penetration. Reference: Dombi et al., 2016.",
+          "min_age_years": 0.0,
+          "pediatric_approved": false,
+          "pediatric_ae_rate": null
+        }
+      },
+      {
+        "drug_name": "EVEROLIMUS",
+        "chembl_id": "CHEMBL1908360",
+        "drug_phase": 4,
+        "moa": "FK506-binding protein 1A inhibitor",
+        "final_score": 0.256,
+        "caution": true,
+        "caution_label": "Caution: limited pediatric data",
+        "scores": {
+          "bbb": 0.9,
+          "safety": 0.61,
+          "pathway_alignment": 0.0,
+          "network_proximity": 0.333,
+          "phenotypic_overlap": 0.435
+        },
+        "evidence": {
+          "top_shared_pathways": [],
+          "top_shared_hpo_terms": [
+            {
+              "term_id": "HP:0000729",
+              "name": "Autistic behavior",
+              "ic": 10.659016995048848
+            },
+            {
+              "term_id": "HP:0003593",
+              "name": "Infantile onset",
+              "ic": 10.13704104076699
+            },
+            {
+              "term_id": "HP:0002353",
+              "name": "EEG abnormality",
+              "ic": 9.228760710963495
+            },
+            {
+              "term_id": "HP:0000006",
+              "name": "Autosomal dominant inheritance",
+              "ic": 9.2181703094204
+            },
+            {
+              "term_id": "HP:0000486",
+              "name": "Strabismus",
+              "ic": 9.106979132768554
+            }
+          ],
+          "shared_genes": [
+            "FGFR2",
+            "FBN1",
+            "FLNA",
+            "FGFR3",
+            "BRAF",
+            "COL2A1",
+            "LMNA",
+            "FGFR1",
+            "PTCH1",
+            "CREBBP"
+          ],
+          "drug_targets": [
+            "MTOR",
+            "TGFBR1",
+            "FKBP1A",
+            "CALML3",
+            "CALML5",
+            "CALML6",
+            "PPP3R1",
+            "CALM3",
+            "RPTOR",
+            "ACVR1",
+            "MLST8"
+          ],
+          "mean_network_distance": 2.0,
+          "hpo_confidence": "High",
+          "scoring_method": "magnitude_aware_cosine",
+          "bbb_method": "clinical_evidence_authoritative",
+          "bbb_experimental_evidence": "FDA-approved for TSC-associated SEGA and partial-onset seizures (CNS indications). CSF penetration documented. Reference: Franz et al., 2013.",
+          "min_age_years": 0.0,
+          "pediatric_approved": false,
+          "pediatric_ae_rate": null
+        }
+      },
+      {
+        "drug_name": "SIROLIMUS",
+        "chembl_id": "CHEMBL413",
+        "drug_phase": 3,
+        "moa": "FK506-binding protein 1A inhibitor",
+        "final_score": 0.256,
+        "caution": true,
+        "caution_label": "Caution: limited pediatric data",
+        "scores": {
+          "bbb": 0.85,
+          "safety": 0.61,
+          "pathway_alignment": 0.0,
+          "network_proximity": 0.333,
+          "phenotypic_overlap": 0.435
+        },
+        "evidence": {
+          "top_shared_pathways": [],
+          "top_shared_hpo_terms": [
+            {
+              "term_id": "HP:0000729",
+              "name": "Autistic behavior",
+              "ic": 10.659016995048848
+            },
+            {
+              "term_id": "HP:0003593",
+              "name": "Infantile onset",
+              "ic": 10.13704104076699
+            },
+            {
+              "term_id": "HP:0002353",
+              "name": "EEG abnormality",
+              "ic": 9.228760710963495
+            },
+            {
+              "term_id": "HP:0000006",
+              "name": "Autosomal dominant inheritance",
+              "ic": 9.2181703094204
+            },
+            {
+              "term_id": "HP:0000486",
+              "name": "Strabismus",
+              "ic": 9.106979132768554
+            }
+          ],
+          "shared_genes": [
+            "FGFR2",
+            "FBN1",
+            "FLNA",
+            "FGFR3",
+            "BRAF",
+            "COL2A1",
+            "LMNA",
+            "FGFR1",
+            "PTCH1",
+            "CREBBP"
+          ],
+          "drug_targets": [
+            "MTOR",
+            "TGFBR1",
+            "FKBP1A",
+            "CALML3",
+            "CALML5",
+            "CALML6",
+            "PPP3R1",
+            "CALM3",
+            "RPTOR",
+            "ACVR1",
+            "MLST8"
+          ],
+          "mean_network_distance": 2.0,
+          "hpo_confidence": "High",
+          "scoring_method": "magnitude_aware_cosine",
+          "bbb_method": "clinical_evidence_authoritative",
+          "bbb_experimental_evidence": "Preclinical CNS efficacy in SYNGAP1, TSC, and NF1 mouse models. CNS exposure sufficient for mTOR inhibition at systemic doses. Reference: Bhatt et al., 2020.",
+          "min_age_years": 0.0,
+          "pediatric_approved": false,
+          "pediatric_ae_rate": null
+        }
+      },
+      {
+        "drug_name": "EVEROLIMUS",
+        "chembl_id": "CHEMBL1908360",
+        "drug_phase": 2,
+        "moa": "FK506-binding protein 1A inhibitor",
+        "final_score": 0.256,
+        "caution": true,
+        "caution_label": "Caution: limited pediatric data",
+        "scores": {
+          "bbb": 0.9,
+          "safety": 0.61,
+          "pathway_alignment": 0.0,
+          "network_proximity": 0.333,
+          "phenotypic_overlap": 0.435
+        },
+        "evidence": {
+          "top_shared_pathways": [],
+          "top_shared_hpo_terms": [
+            {
+              "term_id": "HP:0000729",
+              "name": "Autistic behavior",
+              "ic": 10.659016995048848
+            },
+            {
+              "term_id": "HP:0003593",
+              "name": "Infantile onset",
+              "ic": 10.13704104076699
+            },
+            {
+              "term_id": "HP:0002353",
+              "name": "EEG abnormality",
+              "ic": 9.228760710963495
+            },
+            {
+              "term_id": "HP:0000006",
+              "name": "Autosomal dominant inheritance",
+              "ic": 9.2181703094204
+            },
+            {
+              "term_id": "HP:0000486",
+              "name": "Strabismus",
+              "ic": 9.106979132768554
+            }
+          ],
+          "shared_genes": [
+            "FGFR2",
+            "FBN1",
+            "FLNA",
+            "FGFR3",
+            "BRAF",
+            "COL2A1",
+            "LMNA",
+            "FGFR1",
+            "PTCH1",
+            "CREBBP"
+          ],
+          "drug_targets": [
+            "MTOR",
+            "TGFBR1",
+            "FKBP1A",
+            "CALML3",
+            "CALML5",
+            "CALML6",
+            "PPP3R1",
+            "CALM3",
+            "RPTOR",
+            "ACVR1",
+            "MLST8"
+          ],
+          "mean_network_distance": 2.0,
+          "hpo_confidence": "High",
+          "scoring_method": "magnitude_aware_cosine",
+          "bbb_method": "clinical_evidence_authoritative",
+          "bbb_experimental_evidence": "FDA-approved for TSC-associated SEGA and partial-onset seizures (CNS indications). CSF penetration documented. Reference: Franz et al., 2013.",
+          "min_age_years": 0.0,
+          "pediatric_approved": false,
+          "pediatric_ae_rate": null
+        }
+      },
+      {
+        "drug_name": "SIROLIMUS",
+        "chembl_id": "CHEMBL413",
+        "drug_phase": 2,
+        "moa": "FK506-binding protein 1A inhibitor",
+        "final_score": 0.256,
+        "caution": true,
+        "caution_label": "Caution: limited pediatric data",
+        "scores": {
+          "bbb": 0.85,
+          "safety": 0.61,
+          "pathway_alignment": 0.0,
+          "network_proximity": 0.333,
+          "phenotypic_overlap": 0.435
+        },
+        "evidence": {
+          "top_shared_pathways": [],
+          "top_shared_hpo_terms": [
+            {
+              "term_id": "HP:0000729",
+              "name": "Autistic behavior",
+              "ic": 10.659016995048848
+            },
+            {
+              "term_id": "HP:0003593",
+              "name": "Infantile onset",
+              "ic": 10.13704104076699
+            },
+            {
+              "term_id": "HP:0002353",
+              "name": "EEG abnormality",
+              "ic": 9.228760710963495
+            },
+            {
+              "term_id": "HP:0000006",
+              "name": "Autosomal dominant inheritance",
+              "ic": 9.2181703094204
+            },
+            {
+              "term_id": "HP:0000486",
+              "name": "Strabismus",
+              "ic": 9.106979132768554
+            }
+          ],
+          "shared_genes": [
+            "FGFR2",
+            "FBN1",
+            "FLNA",
+            "FGFR3",
+            "BRAF",
+            "COL2A1",
+            "LMNA",
+            "FGFR1",
+            "PTCH1",
+            "CREBBP"
+          ],
+          "drug_targets": [
+            "MTOR",
+            "TGFBR1",
+            "FKBP1A",
+            "CALML3",
+            "CALML5",
+            "CALML6",
+            "PPP3R1",
+            "CALM3",
+            "RPTOR",
+            "ACVR1",
+            "MLST8"
+          ],
+          "mean_network_distance": 2.0,
+          "hpo_confidence": "High",
+          "scoring_method": "magnitude_aware_cosine",
+          "bbb_method": "clinical_evidence_authoritative",
+          "bbb_experimental_evidence": "Preclinical CNS efficacy in SYNGAP1, TSC, and NF1 mouse models. CNS exposure sufficient for mTOR inhibition at systemic doses. Reference: Bhatt et al., 2020.",
+          "min_age_years": 0.0,
+          "pediatric_approved": false,
+          "pediatric_ae_rate": null
+        }
+      }
+    ]
+  },
+  "validation": {
+    "positive_controls": [
+      {
+        "drug": "everolimus",
+        "in_tree": true,
+        "in_top3": false,
+        "final_score": 0.256,
+        "passes": false,
+        "expected": "Top 3 candidate"
+      },
+      {
+        "drug": "selumetinib",
+        "in_tree": true,
+        "in_top3": true,
+        "final_score": 0.271,
+        "passes": false,
+        "expected": "Top 3 candidate"
+      }
+    ],
+    "negative_controls": [
+      {
+        "drug": "imatinib",
+        "in_tree": false,
+        "final_score": null,
+        "passes": true,
+        "expected": "Excluded from tree or low score"
+      },
+      {
+        "drug": "imiglucerase",
+        "in_tree": false,
+        "final_score": null,
+        "passes": true,
+        "expected": "Excluded from tree or low score"
+      }
+    ],
+    "overall_pass": false
+  },
+  "sensitivity_analysis": {
+    "baseline": [
+      "KETAMINE",
+      "RISPERIDONE",
+      "SELUMETINIB"
+    ],
+    "pathway_emphasized": [
+      "KETAMINE",
+      "SELUMETINIB",
+      "RISPERIDONE"
+    ],
+    "network_emphasized": [
+      "KETAMINE",
+      "SELUMETINIB",
+      "RISPERIDONE"
+    ],
+    "phenotypic_emphasized": [
+      "KETAMINE",
+      "RISPERIDONE",
+      "SELUMETINIB"
+    ],
+    "_stable": true,
+    "_baseline_top3": [
+      "KETAMINE",
+      "RISPERIDONE",
+      "SELUMETINIB"
+    ]
+  }
+}

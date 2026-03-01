@@ -124,6 +124,7 @@ def _format_drug_node(result: dict) -> dict:
             "drug_targets": ev.get("drug_targets", []),
             "mean_network_distance": c2.get("mean_distance"),
             "hpo_confidence": ev.get("hpo_confidence"),
+            "scoring_method": ev.get("scoring_method"),
             "bbb_method": bbb.get("method"),
             "bbb_experimental_evidence": bbb.get("experimental_evidence"),
             "min_age_years": safety.get("min_age_years"),

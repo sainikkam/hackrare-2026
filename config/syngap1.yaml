@@ -1,25 +1,21 @@
 disease:
-  name: "Tuberous Sclerosis Complex"
-  omim_ids: ["191100", "613254"]
-  genes: ["TSC1", "TSC2"]
-  entrez_ids: [7248, 7249]
-  ensembl_ids: ["ENSG00000165699", "ENSG00000103197"]
-  opentargets_search: "tuberous sclerosis"
-  disgenet_disease_id: "C0041341"
+  name: "SYNGAP1-Related Disorders"
+  omim_ids: ["612621"]
+  genes: ["SYNGAP1"]
+  entrez_ids: [8831]
+  ensembl_ids: ["ENSG00000197283"]
+  opentargets_search: "SYNGAP1"
+  disgenet_disease_id: "C3150896"
 
 layer2_diseases:
+  - name: "Tuberous Sclerosis Complex"
+    genes: ["TSC1", "TSC2"]
+    entrez_ids: [7248, 7249]
+    opentargets_search: "tuberous sclerosis"
   - name: "Neurofibromatosis Type 1"
     genes: ["NF1"]
     entrez_ids: [4763]
     opentargets_search: "neurofibromatosis type 1"
-  - name: "SYNGAP1-Related Disorders"
-    genes: ["SYNGAP1"]
-    entrez_ids: [8831]
-    opentargets_search: "SYNGAP1"
-  - name: "Rett Syndrome"
-    genes: ["MECP2"]
-    entrez_ids: [4204]
-    opentargets_search: "rett syndrome"
   - name: "Angelman Syndrome"
     genes: ["UBE3A"]
     entrez_ids: [7337]
@@ -28,6 +24,10 @@ layer2_diseases:
     genes: ["FMR1"]
     entrez_ids: [2332]
     opentargets_search: "fragile x syndrome"
+  - name: "Rett Syndrome"
+    genes: ["MECP2"]
+    entrez_ids: [4204]
+    opentargets_search: "rett syndrome"
 
 filters:
   chembl_min_pchembl: 7.0
@@ -42,8 +42,8 @@ filters:
 positive_controls:
   - drug_name: "everolimus"
     chembl_id: "CHEMBL1908360"
-  - drug_name: "sirolimus"
-    chembl_id: "CHEMBL413"
+  - drug_name: "selumetinib"
+    chembl_id: "CHEMBL1614701"
 
 negative_controls:
   - drug_name: "imatinib"

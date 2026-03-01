@@ -33,7 +33,8 @@ filters:
   chembl_min_pchembl: 7.0
   opentargets_min_genetic_score: 0.3
   string_confidence: 700
-  bbb_gate_threshold: 0.5
+  bbb_gate_threshold: 0.8
+  scoring_method: magnitude_aware_cosine
   pediatric_safety_threshold: 0.6
   min_final_score_display: 0.2
   max_candidates: 40

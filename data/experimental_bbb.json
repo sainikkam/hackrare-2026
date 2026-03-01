@@ -1,0 +1,79 @@
+{
+  "_comment": "Curated CNS evidence scores for drugs with documented neurological efficacy. Score reflects strength of clinical/preclinical CNS penetration evidence. Source: FDA labels, published PK studies, preclinical efficacy data.",
+  "everolimus": {
+    "score": 0.90,
+    "evidence": "FDA-approved for TSC-associated SEGA and partial-onset seizures (CNS indications). CSF penetration documented. Reference: Franz et al., 2013."
+  },
+  "sirolimus": {
+    "score": 0.85,
+    "evidence": "Preclinical CNS efficacy in SYNGAP1, TSC, and NF1 mouse models. CNS exposure sufficient for mTOR inhibition at systemic doses. Reference: Bhatt et al., 2020."
+  },
+  "temsirolimus": {
+    "score": 0.80,
+    "evidence": "CNS penetration documented in neuro-oncology studies. mTOR inhibitor class effect."
+  },
+  "selumetinib": {
+    "score": 0.88,
+    "evidence": "FDA-approved for NF1 plexiform neurofibromas (pediatric >= 2 years). Active trials for NF1 optic pathway gliomas confirm CNS penetration. Reference: Dombi et al., 2016."
+  },
+  "trametinib": {
+    "score": 0.82,
+    "evidence": "CNS penetration documented in pediatric low-grade glioma trials. MEK inhibitor class with CNS activity. Reference: Fangusaro et al., 2019."
+  },
+  "binimetinib": {
+    "score": 0.75,
+    "evidence": "CNS activity in melanoma brain metastasis trials. MEK inhibitor."
+  },
+  "cobimetinib": {
+    "score": 0.72,
+    "evidence": "Some CNS activity data from melanoma studies."
+  },
+  "metformin": {
+    "score": 0.70,
+    "evidence": "Crosses BBB via OCT transporters. CNS effects documented in multiple neurological conditions. Reference: Ou et al., 2018."
+  },
+  "lovastatin": {
+    "score": 0.75,
+    "evidence": "Lipophilic statin with documented CNS penetration. Cognitive effects studied in NF1. Reference: Krab et al., 2008."
+  },
+  "simvastatin": {
+    "score": 0.78,
+    "evidence": "Lipophilic statin, high CNS penetration vs. hydrophilic statins. Neuroprotective effects documented."
+  },
+  "vigabatrin": {
+    "score": 0.92,
+    "evidence": "FDA-approved antiepileptic with primary CNS target. Direct GABA mechanism."
+  },
+  "valproic acid": {
+    "score": 0.95,
+    "evidence": "Classic CNS drug. FDA-approved for epilepsy. High CNS penetration."
+  },
+  "memantine": {
+    "score": 0.93,
+    "evidence": "FDA-approved for Alzheimer's. Primary CNS target (NMDA receptor)."
+  },
+  "ketamine": {
+    "score": 0.96,
+    "evidence": "Anesthetic/CNS drug with primary CNS target."
+  },
+  "lithium": {
+    "score": 0.90,
+    "evidence": "Primary CNS drug (mood stabilizer). Well-documented CNS penetration."
+  },
+  "minocycline": {
+    "score": 0.72,
+    "evidence": "Crosses BBB. Studied in multiple CNS conditions including Fragile X. Reference: Bhatt et al."
+  },
+  "rapamycin": {
+    "score": 0.85,
+    "evidence": "Same as sirolimus (rapamycin is the INN for sirolimus). CNS efficacy in multiple mouse models."
+  },
+  "cabozantinib": {
+    "score": 0.65,
+    "evidence": "Some CNS penetration data from GBM trials."
+  },
+  "erlotinib": {
+    "score": 0.60,
+    "evidence": "Limited CNS penetration. Some data in EGFR-mutant CNS metastases."
+  }
+}

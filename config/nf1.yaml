@@ -1,0 +1,51 @@
+disease:
+  name: "Neurofibromatosis Type 1"
+  omim_ids: ["162200"]
+  genes: ["NF1"]
+  entrez_ids: [4763]
+  ensembl_ids: ["ENSG00000196712"]
+  opentargets_search: "neurofibromatosis type 1"
+  disgenet_disease_id: "C0027831"
+
+layer2_diseases:
+  - name: "Tuberous Sclerosis Complex"
+    genes: ["TSC1", "TSC2"]
+    entrez_ids: [7248, 7249]
+    opentargets_search: "tuberous sclerosis"
+  - name: "SYNGAP1-Related Disorders"
+    genes: ["SYNGAP1"]
+    entrez_ids: [8831]
+    opentargets_search: "SYNGAP1"
+  - name: "Costello Syndrome"
+    genes: ["HRAS"]
+    entrez_ids: [3265]
+    opentargets_search: "costello syndrome"
+  - name: "Noonan Syndrome"
+    genes: ["PTPN11", "SOS1", "RAF1"]
+    entrez_ids: [5781, 6654, 5894]
+    opentargets_search: "noonan syndrome"
+  - name: "LEOPARD Syndrome"
+    genes: ["PTPN11"]
+    entrez_ids: [5781]
+    opentargets_search: "LEOPARD syndrome"
+
+filters:
+  chembl_min_pchembl: 7.0
+  opentargets_min_genetic_score: 0.3
+  string_confidence: 700
+  bbb_gate_threshold: 0.5
+  pediatric_safety_threshold: 0.6
+  min_final_score_display: 0.2
+  max_candidates: 40
+
+positive_controls:
+  - drug_name: "selumetinib"
+    chembl_id: "CHEMBL1614701"
+  - drug_name: "trametinib"
+    chembl_id: "CHEMBL2103875"
+
+negative_controls:
+  - drug_name: "imiglucerase"
+    chembl_id: "CHEMBL1201570"
+  - drug_name: "imatinib"
+    chembl_id: "CHEMBL941"

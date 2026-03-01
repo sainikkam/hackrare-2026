@@ -46,3 +46,9 @@ project.lock.json
 
 # OS
 Thumbs.db
+
+# Project-specific
+data/cache/
+data/hpo/
+.venv/
+venv/

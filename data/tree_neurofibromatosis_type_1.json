@@ -1,0 +1,1156 @@
+{
+  "root": {
+    "disease": "Neurofibromatosis Type 1",
+    "omim_ids": [
+      "162200"
+    ],
+    "genes": [
+      "NF1"
+    ],
+    "layer2": [
+      {
+        "disease": "Costello Syndrome",
+        "overlap_score_to_root": 0.558,
+        "hpo_similarity": 0.549,
+        "pathway_similarity": 0.245,
+        "n_candidates_evaluated": 0,
+        "n_gate1_pass": 0,
+        "n_gate2_pass": 0,
+        "n_scored": 0,
+        "drugs": [],
+        "gate1_failures": [],
+        "gate2_failures": []
+      },
+      {
+        "disease": "Noonan Syndrome",
+        "overlap_score_to_root": 0.535,
+        "hpo_similarity": 0.546,
+        "pathway_similarity": 0.165,
+        "n_candidates_evaluated": 3,
+        "n_gate1_pass": 1,
+        "n_gate2_pass": 1,
+        "n_scored": 1,
+        "drugs": [
+          {
+            "drug_name": "SIMVASTATIN",
+            "chembl_id": "CHEMBL1064",
+            "drug_phase": 3,
+            "moa": "HMG-CoA reductase inhibitor",
+            "final_score": 0.149,
+            "caution": true,
+            "caution_label": "Caution: limited pediatric data",
+            "scores": {
+              "bbb": 0.666,
+              "safety": 0.61,
+              "pathway_alignment": 0.0,
+              "network_proximity": 0.0,
+              "phenotypic_overlap": 0.446
+            },
+            "evidence": {
+              "top_shared_pathways": [],
+              "top_shared_hpo_terms": [
+                {
+                  "term_id": "HP:0000494",
+                  "name": "Downslanted palpebral fissures",
+                  "ic": 11.29702573013164
+                },
+                {
+                  "term_id": "HP:0002808",
+                  "name": "Kyphosis",
+                  "ic": 10.855387081621195
+                },
+                {
+                  "term_id": "HP:0000369",
+                  "name": "Low-set ears",
+                  "ic": 10.79834457129251
+                },
+                {
+                  "term_id": "HP:0011463",
+                  "name": "Childhood onset",
+                  "ic": 10.656415199860568
+                },
+                {
+                  "term_id": "HP:0003593",
+                  "name": "Infantile onset",
+                  "ic": 10.13704104076699
+                }
+              ],
+              "shared_genes": [
+                "LMNA",
+                "BRAF",
+                "FGFR2",
+                "KRAS",
+                "PTCH1",
+                "NF1",
+                "GBA1",
+                "POLG",
+                "FGFR1",
+                "FGFR3"
+              ],
+              "drug_targets": [
+                "HMGCR",
+                "HMGCS2",
+                "FDPS",
+                "SREBF1",
+                "MVK",
+                "FDFT1",
+                "INSIG1",
+                "INSIG2",
+                "SQLE",
+                "SREBF2",
+                "HMGCS1"
+              ],
+              "mean_network_distance": 10.0,
+              "hpo_confidence": "High",
+              "bbb_method": "composite",
+              "bbb_experimental_evidence": "Lipophilic statin, high CNS penetration vs. hydrophilic statins. Neuroprotective effects documented.",
+              "min_age_years": 0.0,
+              "pediatric_approved": false,
+              "pediatric_ae_rate": null
+            }
+          }
+        ],
+        "gate1_failures": [
+          {
+            "drug_name": "SOMATROPIN",
+            "bbb_score": 0.3
+          },
+          {
+            "drug_name": "MECASERMIN",
+            "bbb_score": 0.3
+          }
+        ],
+        "gate2_failures": []
+      },
+      {
+        "disease": "LEOPARD Syndrome",
+        "overlap_score_to_root": 0.5,
+        "hpo_similarity": 0.558,
+        "pathway_similarity": 0.036,
+        "n_candidates_evaluated": 0,
+        "n_gate1_pass": 0,
+        "n_gate2_pass": 0,
+        "n_scored": 0,
+        "drugs": [],
+        "gate1_failures": [],
+        "gate2_failures": []
+      },
+      {
+        "disease": "SYNGAP1-Related Disorders",
+        "overlap_score_to_root": 0.494,
+        "hpo_similarity": 0.552,
+        "pathway_similarity": 0.11,
+        "n_candidates_evaluated": 0,
+        "n_gate1_pass": 0,
+        "n_gate2_pass": 0,
+        "n_scored": 0,
+        "drugs": [],
+        "gate1_failures": [],
+        "gate2_failures": []
+      },
+      {
+        "disease": "Tuberous Sclerosis Complex",
+        "overlap_score_to_root": 0.478,
+        "hpo_similarity": 0.576,
+        "pathway_similarity": 0.008,
+        "n_candidates_evaluated": 9,
+        "n_gate1_pass": 7,
+        "n_gate2_pass": 5,
+        "n_scored": 5,
+        "drugs": [
+          {
+            "drug_name": "selumetinib",
+            "chembl_id": "CHEMBL1614701",
+            "drug_phase": 4,
+            "moa": "",
+            "final_score": 0.472,
+            "caution": true,
+            "caution_label": "Caution: limited pediatric data",
+            "scores": {
+              "bbb": 0.704,
+              "safety": 0.61,
+              "pathway_alignment": 0.421,
+              "network_proximity": 0.32,
+              "phenotypic_overlap": 0.675
+            },
+            "evidence": {
+              "top_shared_pathways": [
+                "Frs2-mediated activation",
+                "MAP2K and MAPK activation",
+                "MAP3K8 (TPL2)-dependent MAPK1/3 activation",
+                "MAPK1 (ERK2) activation",
+                "MAPK3 (ERK1) activation"
+              ],
+              "top_shared_hpo_terms": [
+                {
+                  "term_id": "HP:0100697",
+                  "name": "Neurofibrosarcoma",
+                  "ic": 18.187796660376883
+                },
+                {
+                  "term_id": "HP:0007429",
+                  "name": "Few cafe-au-lait spots",
+                  "ic": 17.602834159655725
+                },
+                {
+                  "term_id": "HP:0001548",
+                  "name": "Overgrowth",
+                  "ic": 14.890116111736196
+                },
+                {
+                  "term_id": "HP:0007565",
+                  "name": "Multiple cafe-au-lait spots",
+                  "ic": 14.524831647654452
+                },
+                {
+                  "term_id": "HP:0001480",
+                  "name": "Freckling",
+                  "ic": 14.432909158213413
+                }
+              ],
+              "shared_genes": [
+                "BRAF",
+                "KRAS",
+                "FGFR2",
+                "FGFR1",
+                "LMNA",
+                "PIK3CA",
+                "PTCH1",
+                "FLNA",
+                "FGFR3",
+                "FBN1"
+              ],
+              "drug_targets": [
+                "ARAF",
+                "LAMTOR3",
+                "MAPK3",
+                "KRAS",
+                "MAPK1",
+                "KSR2",
+                "MAP3K1",
+                "MAP2K1",
+                "BRAF",
+                "MAP2K2",
+                "KSR1",
+                "RAF1"
+              ],
+              "mean_network_distance": 2.125,
+              "hpo_confidence": "High",
+              "bbb_method": "composite",
+              "bbb_experimental_evidence": "FDA-approved for NF1 plexiform neurofibromas (pediatric >= 2 years). Active trials for NF1 optic pathway gliomas confirm CNS penetration. Reference: Dombi et al., 2016.",
+              "min_age_years": 0.0,
+              "pediatric_approved": false,
+              "pediatric_ae_rate": null
+            }
+          },
+          {
+            "drug_name": "trametinib",
+            "chembl_id": "CHEMBL2103875",
+            "drug_phase": 4,
+            "moa": "",
+            "final_score": 0.472,
+            "caution": true,
+            "caution_label": "Caution: limited pediatric data",
+            "scores": {
+              "bbb": 0.675,
+              "safety": 0.61,
+              "pathway_alignment": 0.421,
+              "network_proximity": 0.32,
+              "phenotypic_overlap": 0.675
+            },
+            "evidence": {
+              "top_shared_pathways": [
+                "Frs2-mediated activation",
+                "MAP2K and MAPK activation",
+                "MAP3K8 (TPL2)-dependent MAPK1/3 activation",
+                "MAPK1 (ERK2) activation",
+                "MAPK3 (ERK1) activation"
+              ],
+              "top_shared_hpo_terms": [
+                {
+                  "term_id": "HP:0100697",
+                  "name": "Neurofibrosarcoma",
+                  "ic": 18.187796660376883
+                },
+                {
+                  "term_id": "HP:0007429",
+                  "name": "Few cafe-au-lait spots",
+                  "ic": 17.602834159655725
+                },
+                {
+                  "term_id": "HP:0001548",
+                  "name": "Overgrowth",
+                  "ic": 14.890116111736196
+                },
+                {
+                  "term_id": "HP:0007565",
+                  "name": "Multiple cafe-au-lait spots",
+                  "ic": 14.524831647654452
+                },
+                {
+                  "term_id": "HP:0001480",
+                  "name": "Freckling",
+                  "ic": 14.432909158213413
+                }
+              ],
+              "shared_genes": [
+                "BRAF",
+                "KRAS",
+                "FGFR2",
+                "FGFR1",
+                "LMNA",
+                "PIK3CA",
+                "PTCH1",
+                "FLNA",
+                "FGFR3",
+                "FBN1"
+              ],
+              "drug_targets": [
+                "ARAF",
+                "LAMTOR3",
+                "MAPK3",
+                "KRAS",
+                "MAPK1",
+                "KSR2",
+                "MAP3K1",
+                "MAP2K1",
+                "BRAF",
+                "MAP2K2",
+                "KSR1",
+                "RAF1"
+              ],
+              "mean_network_distance": 2.125,
+              "hpo_confidence": "High",
+              "bbb_method": "composite",
+              "bbb_experimental_evidence": "CNS penetration documented in pediatric low-grade glioma trials. MEK inhibitor class with CNS activity. Reference: Fangusaro et al., 2019.",
+              "min_age_years": 0.0,
+              "pediatric_approved": false,
+              "pediatric_ae_rate": null
+            }
+          },
+          {
+            "drug_name": "EVEROLIMUS",
+            "chembl_id": "CHEMBL1908360",
+            "drug_phase": 4,
+            "moa": "FK506-binding protein 1A inhibitor",
+            "final_score": 0.251,
+            "caution": true,
+            "caution_label": "Caution: limited pediatric data",
+            "scores": {
+              "bbb": 0.611,
+              "safety": 0.61,
+              "pathway_alignment": 0.025,
+              "network_proximity": 0.242,
+              "phenotypic_overlap": 0.487
+            },
+            "evidence": {
+              "top_shared_pathways": [],
+              "top_shared_hpo_terms": [
+                {
+                  "term_id": "HP:0000768",
+                  "name": "Pectus carinatum",
+                  "ic": 12.818562850711162
+                },
+                {
+                  "term_id": "HP:0001256",
+                  "name": "Mild intellectual disability",
+                  "ic": 11.955775537842657
+                },
+                {
+                  "term_id": "HP:0000767",
+                  "name": "Pectus excavatum",
+                  "ic": 11.896242214533038
+                },
+                {
+                  "term_id": "HP:0001328",
+                  "name": "Specific learning disability",
+                  "ic": 11.669471352686015
+                },
+                {
+                  "term_id": "HP:0000501",
+                  "name": "Glaucoma",
+                  "ic": 11.455346547333168
+                }
+              ],
+              "shared_genes": [
+                "FGFR2",
+                "FBN1",
+                "FLNA",
+                "BRAF",
+                "FGFR3",
+                "COL2A1",
+                "LMNA",
+                "FGFR1",
+                "PTCH1",
+                "CREBBP"
+              ],
+              "drug_targets": [
+                "TGFBR1",
+                "CALML3",
+                "CALM3",
+                "RPTOR",
+                "MTOR",
+                "PPP3R1",
+                "CALML6",
+                "MLST8",
+                "CALML5",
+                "ACVR1",
+                "FKBP1A"
+              ],
+              "mean_network_distance": 3.125,
+              "hpo_confidence": "High",
+              "bbb_method": "composite",
+              "bbb_experimental_evidence": "FDA-approved for TSC-associated SEGA and partial-onset seizures (CNS indications). CSF penetration documented. Reference: Franz et al., 2013.",
+              "min_age_years": 0.0,
+              "pediatric_approved": false,
+              "pediatric_ae_rate": null
+            }
+          },
+          {
+            "drug_name": "SIROLIMUS",
+            "chembl_id": "CHEMBL413",
+            "drug_phase": 3,
+            "moa": "FK506-binding protein 1A inhibitor",
+            "final_score": 0.251,
+            "caution": true,
+            "caution_label": "Caution: limited pediatric data",
+            "scores": {
+              "bbb": 0.579,
+              "safety": 0.61,
+              "pathway_alignment": 0.025,
+              "network_proximity": 0.242,
+              "phenotypic_overlap": 0.487
+            },
+            "evidence": {
+              "top_shared_pathways": [],
+              "top_shared_hpo_terms": [
+                {
+                  "term_id": "HP:0000768",
+                  "name": "Pectus carinatum",
+                  "ic": 12.818562850711162
+                },
+                {
+                  "term_id": "HP:0001256",
+                  "name": "Mild intellectual disability",
+                  "ic": 11.955775537842657
+                },
+                {
+                  "term_id": "HP:0000767",
+                  "name": "Pectus excavatum",
+                  "ic": 11.896242214533038
+                },
+                {
+                  "term_id": "HP:0001328",
+                  "name": "Specific learning disability",
+                  "ic": 11.669471352686015
+                },
+                {
+                  "term_id": "HP:0000501",
+                  "name": "Glaucoma",
+                  "ic": 11.455346547333168
+                }
+              ],
+              "shared_genes": [
+                "FGFR2",
+                "FBN1",
+                "FLNA",
+                "BRAF",
+                "FGFR3",
+                "COL2A1",
+                "LMNA",
+                "FGFR1",
+                "PTCH1",
+                "CREBBP"
+              ],
+              "drug_targets": [
+                "TGFBR1",
+                "CALML3",
+                "CALM3",
+                "RPTOR",
+                "MTOR",
+                "PPP3R1",
+                "CALML6",
+                "MLST8",
+                "CALML5",
+                "ACVR1",
+                "FKBP1A"
+              ],
+              "mean_network_distance": 3.125,
+              "hpo_confidence": "High",
+              "bbb_method": "composite",
+              "bbb_experimental_evidence": "Preclinical CNS efficacy in SYNGAP1, TSC, and NF1 mouse models. CNS exposure sufficient for mTOR inhibition at systemic doses. Reference: Bhatt et al., 2020.",
+              "min_age_years": 0.0,
+              "pediatric_approved": false,
+              "pediatric_ae_rate": null
+            }
+          },
+          {
+            "drug_name": "GANAXOLONE",
+            "chembl_id": "CHEMBL1568698",
+            "drug_phase": 3,
+            "moa": "GABA-A receptor; anion channel positive allosteric modulator",
+            "final_score": 0.155,
+            "caution": true,
+            "caution_label": "Caution: limited pediatric data",
+            "scores": {
+              "bbb": 0.569,
+              "safety": 0.61,
+              "pathway_alignment": 0.0,
+              "network_proximity": 0.0,
+              "phenotypic_overlap": 0.464
+            },
+            "evidence": {
+              "top_shared_pathways": [],
+              "top_shared_hpo_terms": [
+                {
+                  "term_id": "HP:0002521",
+                  "name": "Hypsarrhythmia",
+                  "ic": 12.755950873411484
+                },
+                {
+                  "term_id": "HP:0001328",
+                  "name": "Specific learning disability",
+                  "ic": 11.669471352686015
+                },
+                {
+                  "term_id": "HP:0000494",
+                  "name": "Downslanted palpebral fissures",
+                  "ic": 11.29702573013164
+                },
+                {
+                  "term_id": "HP:0002808",
+                  "name": "Kyphosis",
+                  "ic": 10.855387081621195
+                },
+                {
+                  "term_id": "HP:0000369",
+                  "name": "Low-set ears",
+                  "ic": 10.79834457129251
+                }
+              ],
+              "shared_genes": [
+                "FGFR2",
+                "PTCH1",
+                "FGFR1",
+                "BRAF",
+                "MAGEL2",
+                "CREBBP",
+                "FGFR3",
+                "LMNA",
+                "GLI2",
+                "SHH"
+              ],
+              "drug_targets": [
+                "GABRA6",
+                "GABRG3",
+                "GABRG1",
+                "GABRA3",
+                "GABRA5",
+                "GABRB2",
+                "GABRQ",
+                "GABRP",
+                "GABRA2",
+                "GABRB1",
+                "GABRE",
+                "GABRA1",
+                "GABRD",
+                "GABRG2",
+                "GABRA4",
+                "GABRB3"
+              ],
+              "mean_network_distance": 10.0,
+              "hpo_confidence": "High",
+              "bbb_method": "physicochemical",
+              "bbb_experimental_evidence": null,
+              "min_age_years": 0.0,
+              "pediatric_approved": false,
+              "pediatric_ae_rate": null
+            }
+          }
+        ],
+        "gate1_failures": [
+          {
+            "drug_name": "imiglucerase",
+            "bbb_score": 0.3
+          },
+          {
+            "drug_name": "imatinib",
+            "bbb_score": 0.25
+          }
+        ],
+        "gate2_failures": [
+          {
+            "drug_name": "BASIMGLURANT",
+            "safety_score": 0.37
+          },
+          {
+            "drug_name": "VIGABATRIN",
+            "safety_score": 0.0
+          }
+        ]
+      }
+    ]
+  },
+  "summary": {
+    "root_disease": "Neurofibromatosis Type 1",
+    "n_layer2_diseases": 5,
+    "n_total_candidates": 12,
+    "n_gate1_pass": 8,
+    "n_gate2_pass": 6,
+    "n_scored": 6,
+    "global_top_drugs": [
+      {
+        "drug_name": "selumetinib",
+        "chembl_id": "CHEMBL1614701",
+        "drug_phase": 4,
+        "moa": "",
+        "final_score": 0.472,
+        "caution": true,
+        "caution_label": "Caution: limited pediatric data",
+        "scores": {
+          "bbb": 0.704,
+          "safety": 0.61,
+          "pathway_alignment": 0.421,
+          "network_proximity": 0.32,
+          "phenotypic_overlap": 0.675
+        },
+        "evidence": {
+          "top_shared_pathways": [
+            "Frs2-mediated activation",
+            "MAP2K and MAPK activation",
+            "MAP3K8 (TPL2)-dependent MAPK1/3 activation",
+            "MAPK1 (ERK2) activation",
+            "MAPK3 (ERK1) activation"
+          ],
+          "top_shared_hpo_terms": [
+            {
+              "term_id": "HP:0100697",
+              "name": "Neurofibrosarcoma",
+              "ic": 18.187796660376883
+            },
+            {
+              "term_id": "HP:0007429",
+              "name": "Few cafe-au-lait spots",
+              "ic": 17.602834159655725
+            },
+            {
+              "term_id": "HP:0001548",
+              "name": "Overgrowth",
+              "ic": 14.890116111736196
+            },
+            {
+              "term_id": "HP:0007565",
+              "name": "Multiple cafe-au-lait spots",
+              "ic": 14.524831647654452
+            },
+            {
+              "term_id": "HP:0001480",
+              "name": "Freckling",
+              "ic": 14.432909158213413
+            }
+          ],
+          "shared_genes": [
+            "BRAF",
+            "KRAS",
+            "FGFR2",
+            "FGFR1",
+            "LMNA",
+            "PIK3CA",
+            "PTCH1",
+            "FLNA",
+            "FGFR3",
+            "FBN1"
+          ],
+          "drug_targets": [
+            "ARAF",
+            "LAMTOR3",
+            "MAPK3",
+            "KRAS",
+            "MAPK1",
+            "KSR2",
+            "MAP3K1",
+            "MAP2K1",
+            "BRAF",
+            "MAP2K2",
+            "KSR1",
+            "RAF1"
+          ],
+          "mean_network_distance": 2.125,
+          "hpo_confidence": "High",
+          "bbb_method": "composite",
+          "bbb_experimental_evidence": "FDA-approved for NF1 plexiform neurofibromas (pediatric >= 2 years). Active trials for NF1 optic pathway gliomas confirm CNS penetration. Reference: Dombi et al., 2016.",
+          "min_age_years": 0.0,
+          "pediatric_approved": false,
+          "pediatric_ae_rate": null
+        }
+      },
+      {
+        "drug_name": "trametinib",
+        "chembl_id": "CHEMBL2103875",
+        "drug_phase": 4,
+        "moa": "",
+        "final_score": 0.472,
+        "caution": true,
+        "caution_label": "Caution: limited pediatric data",
+        "scores": {
+          "bbb": 0.675,
+          "safety": 0.61,
+          "pathway_alignment": 0.421,
+          "network_proximity": 0.32,
+          "phenotypic_overlap": 0.675
+        },
+        "evidence": {
+          "top_shared_pathways": [
+            "Frs2-mediated activation",
+            "MAP2K and MAPK activation",
+            "MAP3K8 (TPL2)-dependent MAPK1/3 activation",
+            "MAPK1 (ERK2) activation",
+            "MAPK3 (ERK1) activation"
+          ],
+          "top_shared_hpo_terms": [
+            {
+              "term_id": "HP:0100697",
+              "name": "Neurofibrosarcoma",
+              "ic": 18.187796660376883
+            },
+            {
+              "term_id": "HP:0007429",
+              "name": "Few cafe-au-lait spots",
+              "ic": 17.602834159655725
+            },
+            {
+              "term_id": "HP:0001548",
+              "name": "Overgrowth",
+              "ic": 14.890116111736196
+            },
+            {
+              "term_id": "HP:0007565",
+              "name": "Multiple cafe-au-lait spots",
+              "ic": 14.524831647654452
+            },
+            {
+              "term_id": "HP:0001480",
+              "name": "Freckling",
+              "ic": 14.432909158213413
+            }
+          ],
+          "shared_genes": [
+            "BRAF",
+            "KRAS",
+            "FGFR2",
+            "FGFR1",
+            "LMNA",
+            "PIK3CA",
+            "PTCH1",
+            "FLNA",
+            "FGFR3",
+            "FBN1"
+          ],
+          "drug_targets": [
+            "ARAF",
+            "LAMTOR3",
+            "MAPK3",
+            "KRAS",
+            "MAPK1",
+            "KSR2",
+            "MAP3K1",
+            "MAP2K1",
+            "BRAF",
+            "MAP2K2",
+            "KSR1",
+            "RAF1"
+          ],
+          "mean_network_distance": 2.125,
+          "hpo_confidence": "High",
+          "bbb_method": "composite",
+          "bbb_experimental_evidence": "CNS penetration documented in pediatric low-grade glioma trials. MEK inhibitor class with CNS activity. Reference: Fangusaro et al., 2019.",
+          "min_age_years": 0.0,
+          "pediatric_approved": false,
+          "pediatric_ae_rate": null
+        }
+      },
+      {
+        "drug_name": "EVEROLIMUS",
+        "chembl_id": "CHEMBL1908360",
+        "drug_phase": 4,
+        "moa": "FK506-binding protein 1A inhibitor",
+        "final_score": 0.251,
+        "caution": true,
+        "caution_label": "Caution: limited pediatric data",
+        "scores": {
+          "bbb": 0.611,
+          "safety": 0.61,
+          "pathway_alignment": 0.025,
+          "network_proximity": 0.242,
+          "phenotypic_overlap": 0.487
+        },
+        "evidence": {
+          "top_shared_pathways": [],
+          "top_shared_hpo_terms": [
+            {
+              "term_id": "HP:0000768",
+              "name": "Pectus carinatum",
+              "ic": 12.818562850711162
+            },
+            {
+              "term_id": "HP:0001256",
+              "name": "Mild intellectual disability",
+              "ic": 11.955775537842657
+            },
+            {
+              "term_id": "HP:0000767",
+              "name": "Pectus excavatum",
+              "ic": 11.896242214533038
+            },
+            {
+              "term_id": "HP:0001328",
+              "name": "Specific learning disability",
+              "ic": 11.669471352686015
+            },
+            {
+              "term_id": "HP:0000501",
+              "name": "Glaucoma",
+              "ic": 11.455346547333168
+            }
+          ],
+          "shared_genes": [
+            "FGFR2",
+            "FBN1",
+            "FLNA",
+            "BRAF",
+            "FGFR3",
+            "COL2A1",
+            "LMNA",
+            "FGFR1",
+            "PTCH1",
+            "CREBBP"
+          ],
+          "drug_targets": [
+            "TGFBR1",
+            "CALML3",
+            "CALM3",
+            "RPTOR",
+            "MTOR",
+            "PPP3R1",
+            "CALML6",
+            "MLST8",
+            "CALML5",
+            "ACVR1",
+            "FKBP1A"
+          ],
+          "mean_network_distance": 3.125,
+          "hpo_confidence": "High",
+          "bbb_method": "composite",
+          "bbb_experimental_evidence": "FDA-approved for TSC-associated SEGA and partial-onset seizures (CNS indications). CSF penetration documented. Reference: Franz et al., 2013.",
+          "min_age_years": 0.0,
+          "pediatric_approved": false,
+          "pediatric_ae_rate": null
+        }
+      },
+      {
+        "drug_name": "SIROLIMUS",
+        "chembl_id": "CHEMBL413",
+        "drug_phase": 3,
+        "moa": "FK506-binding protein 1A inhibitor",
+        "final_score": 0.251,
+        "caution": true,
+        "caution_label": "Caution: limited pediatric data",
+        "scores": {
+          "bbb": 0.579,
+          "safety": 0.61,
+          "pathway_alignment": 0.025,
+          "network_proximity": 0.242,
+          "phenotypic_overlap": 0.487
+        },
+        "evidence": {
+          "top_shared_pathways": [],
+          "top_shared_hpo_terms": [
+            {
+              "term_id": "HP:0000768",
+              "name": "Pectus carinatum",
+              "ic": 12.818562850711162
+            },
+            {
+              "term_id": "HP:0001256",
+              "name": "Mild intellectual disability",
+              "ic": 11.955775537842657
+            },
+            {
+              "term_id": "HP:0000767",
+              "name": "Pectus excavatum",
+              "ic": 11.896242214533038
+            },
+            {
+              "term_id": "HP:0001328",
+              "name": "Specific learning disability",
+              "ic": 11.669471352686015
+            },
+            {
+              "term_id": "HP:0000501",
+              "name": "Glaucoma",
+              "ic": 11.455346547333168
+            }
+          ],
+          "shared_genes": [
+            "FGFR2",
+            "FBN1",
+            "FLNA",
+            "BRAF",
+            "FGFR3",
+            "COL2A1",
+            "LMNA",
+            "FGFR1",
+            "PTCH1",
+            "CREBBP"
+          ],
+          "drug_targets": [
+            "TGFBR1",
+            "CALML3",
+            "CALM3",
+            "RPTOR",
+            "MTOR",
+            "PPP3R1",
+            "CALML6",
+            "MLST8",
+            "CALML5",
+            "ACVR1",
+            "FKBP1A"
+          ],
+          "mean_network_distance": 3.125,
+          "hpo_confidence": "High",
+          "bbb_method": "composite",
+          "bbb_experimental_evidence": "Preclinical CNS efficacy in SYNGAP1, TSC, and NF1 mouse models. CNS exposure sufficient for mTOR inhibition at systemic doses. Reference: Bhatt et al., 2020.",
+          "min_age_years": 0.0,
+          "pediatric_approved": false,
+          "pediatric_ae_rate": null
+        }
+      },
+      {
+        "drug_name": "GANAXOLONE",
+        "chembl_id": "CHEMBL1568698",
+        "drug_phase": 3,
+        "moa": "GABA-A receptor; anion channel positive allosteric modulator",
+        "final_score": 0.155,
+        "caution": true,
+        "caution_label": "Caution: limited pediatric data",
+        "scores": {
+          "bbb": 0.569,
+          "safety": 0.61,
+          "pathway_alignment": 0.0,
+          "network_proximity": 0.0,
+          "phenotypic_overlap": 0.464
+        },
+        "evidence": {
+          "top_shared_pathways": [],
+          "top_shared_hpo_terms": [
+            {
+              "term_id": "HP:0002521",
+              "name": "Hypsarrhythmia",
+              "ic": 12.755950873411484
+            },
+            {
+              "term_id": "HP:0001328",
+              "name": "Specific learning disability",
+              "ic": 11.669471352686015
+            },
+            {
+              "term_id": "HP:0000494",
+              "name": "Downslanted palpebral fissures",
+              "ic": 11.29702573013164
+            },
+            {
+              "term_id": "HP:0002808",
+              "name": "Kyphosis",
+              "ic": 10.855387081621195
+            },
+            {
+              "term_id": "HP:0000369",
+              "name": "Low-set ears",
+              "ic": 10.79834457129251
+            }
+          ],
+          "shared_genes": [
+            "FGFR2",
+            "PTCH1",
+            "FGFR1",
+            "BRAF",
+            "MAGEL2",
+            "CREBBP",
+            "FGFR3",
+            "LMNA",
+            "GLI2",
+            "SHH"
+          ],
+          "drug_targets": [
+            "GABRA6",
+            "GABRG3",
+            "GABRG1",
+            "GABRA3",
+            "GABRA5",
+            "GABRB2",
+            "GABRQ",
+            "GABRP",
+            "GABRA2",
+            "GABRB1",
+            "GABRE",
+            "GABRA1",
+            "GABRD",
+            "GABRG2",
+            "GABRA4",
+            "GABRB3"
+          ],
+          "mean_network_distance": 10.0,
+          "hpo_confidence": "High",
+          "bbb_method": "physicochemical",
+          "bbb_experimental_evidence": null,
+          "min_age_years": 0.0,
+          "pediatric_approved": false,
+          "pediatric_ae_rate": null
+        }
+      },
+      {
+        "drug_name": "SIMVASTATIN",
+        "chembl_id": "CHEMBL1064",
+        "drug_phase": 3,
+        "moa": "HMG-CoA reductase inhibitor",
+        "final_score": 0.149,
+        "caution": true,
+        "caution_label": "Caution: limited pediatric data",
+        "scores": {
+          "bbb": 0.666,
+          "safety": 0.61,
+          "pathway_alignment": 0.0,
+          "network_proximity": 0.0,
+          "phenotypic_overlap": 0.446
+        },
+        "evidence": {
+          "top_shared_pathways": [],
+          "top_shared_hpo_terms": [
+            {
+              "term_id": "HP:0000494",
+              "name": "Downslanted palpebral fissures",
+              "ic": 11.29702573013164
+            },
+            {
+              "term_id": "HP:0002808",
+              "name": "Kyphosis",
+              "ic": 10.855387081621195
+            },
+            {
+              "term_id": "HP:0000369",
+              "name": "Low-set ears",
+              "ic": 10.79834457129251
+            },
+            {
+              "term_id": "HP:0011463",
+              "name": "Childhood onset",
+              "ic": 10.656415199860568
+            },
+            {
+              "term_id": "HP:0003593",
+              "name": "Infantile onset",
+              "ic": 10.13704104076699
+            }
+          ],
+          "shared_genes": [
+            "LMNA",
+            "BRAF",
+            "FGFR2",
+            "KRAS",
+            "PTCH1",
+            "NF1",
+            "GBA1",
+            "POLG",
+            "FGFR1",
+            "FGFR3"
+          ],
+          "drug_targets": [
+            "HMGCR",
+            "HMGCS2",
+            "FDPS",
+            "SREBF1",
+            "MVK",
+            "FDFT1",
+            "INSIG1",
+            "INSIG2",
+            "SQLE",
+            "SREBF2",
+            "HMGCS1"
+          ],
+          "mean_network_distance": 10.0,
+          "hpo_confidence": "High",
+          "bbb_method": "composite",
+          "bbb_experimental_evidence": "Lipophilic statin, high CNS penetration vs. hydrophilic statins. Neuroprotective effects documented.",
+          "min_age_years": 0.0,
+          "pediatric_approved": false,
+          "pediatric_ae_rate": null
+        }
+      }
+    ]
+  },
+  "validation": {
+    "positive_controls": [
+      {
+        "drug": "selumetinib",
+        "in_tree": true,
+        "in_top3": true,
+        "final_score": 0.472,
+        "passes": true,
+        "expected": "Top 3 candidate"
+      },
+      {
+        "drug": "trametinib",
+        "in_tree": true,
+        "in_top3": true,
+        "final_score": 0.472,
+        "passes": true,
+        "expected": "Top 3 candidate"
+      }
+    ],
+    "negative_controls": [
+      {
+        "drug": "imiglucerase",
+        "in_tree": false,
+        "final_score": null,
+        "passes": true,
+        "expected": "Excluded from tree or low score"
+      },
+      {
+        "drug": "imatinib",
+        "in_tree": false,
+        "final_score": null,
+        "passes": true,
+        "expected": "Excluded from tree or low score"
+      }
+    ],
+    "overall_pass": true
+  },
+  "sensitivity_analysis": {
+    "baseline": [
+      "selumetinib",
+      "trametinib",
+      "EVEROLIMUS"
+    ],
+    "pathway_emphasized": [
+      "selumetinib",
+      "trametinib",
+      "EVEROLIMUS"
+    ],
+    "network_emphasized": [
+      "selumetinib",
+      "trametinib",
+      "EVEROLIMUS"
+    ],
+    "phenotypic_emphasized": [
+      "selumetinib",
+      "trametinib",
+      "EVEROLIMUS"
+    ],
+    "_stable": true,
+    "_baseline_top3": [
+      "selumetinib",
+      "trametinib",
+      "EVEROLIMUS"
+    ]
+  }
+}

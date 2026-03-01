@@ -1,7 +1,8 @@
 """
 Main pipeline orchestrator.
 
-run_pipeline(config_path) -> tree dict
+run_pipeline(config_path)             -> tree dict  (from YAML file)
+run_pipeline_dynamic(disease_name)    -> tree dict  (free-text search, no config file needed)
 
 Steps:
   1. Load config
@@ -42,19 +43,53 @@ logger = logging.getLogger(__name__)
 
 OUTPUT_DIR = Path(__file__).resolve().parents[1] / "data"
 
+# Default neuro panel used when running a custom disease query with no explicit layer2 config.
+_DEFAULT_LAYER2_PANEL = [
+    {"name": "Tuberous Sclerosis Complex",  "genes": ["TSC1", "TSC2"], "entrez_ids": [7248, 7249], "opentargets_search": "tuberous sclerosis"},
+    {"name": "Neurofibromatosis Type 1",    "genes": ["NF1"],          "entrez_ids": [4763],       "opentargets_search": "neurofibromatosis type 1"},
+    {"name": "SYNGAP1-Related Disorders",   "genes": ["SYNGAP1"],      "entrez_ids": [8831],       "opentargets_search": "SYNGAP1"},
+    {"name": "Angelman Syndrome",           "genes": ["UBE3A"],        "entrez_ids": [7337],       "opentargets_search": "angelman syndrome"},
+    {"name": "Rett Syndrome",               "genes": ["MECP2"],        "entrez_ids": [4204],       "opentargets_search": "rett syndrome"},
+    {"name": "Fragile X Syndrome",          "genes": ["FMR1"],         "entrez_ids": [2332],       "opentargets_search": "fragile x syndrome"},
+]
+
 
 def run_pipeline(config_path: str, max_candidates: int | None = None) -> dict:
-    """
-    Run the full pipeline for a disease config file.
+    """Run the full pipeline for a YAML disease config file."""
+    return _run_pipeline_from_config(_load_config(config_path), max_candidates=max_candidates)
 
-    Parameters:
-        config_path: path to YAML config (e.g. 'config/tsc.yaml')
-        max_candidates: override max_candidates from config (for testing)
 
-    Returns:
-        tree dict (JSON-serializable)
+def run_pipeline_dynamic(disease_name: str) -> dict:
     """
-    config = _load_config(config_path)
+    Run the pipeline for any disease by name, with no config file needed.
+    Searches OpenTargets for the disease, then scores drugs from the default
+    neuro comparison panel (TSC, NF1, SYNGAP1, Angelman, Rett, Fragile X).
+    """
+    config = {
+        "disease": {
+            "name": disease_name,
+            "opentargets_search": disease_name,
+            "genes": [],
+            "omim_ids": [],
+        },
+        "layer2_diseases": _DEFAULT_LAYER2_PANEL,
+        "filters": {
+            "max_candidates": 40,
+            "opentargets_min_genetic_score": 0.3,
+            "string_confidence": 700,
+            "bbb_gate_threshold": 0.8,
+            "scoring_method": "magnitude_aware_cosine",
+            "pediatric_safety_threshold": 0.6,
+            "min_final_score_display": 0.2,
+        },
+        "positive_controls": [],
+        "negative_controls": [],
+    }
+    return _run_pipeline_from_config(config)
+
+
+def _run_pipeline_from_config(config: dict, max_candidates: int | None = None) -> dict:
+    """Core pipeline logic — accepts a config dict directly."""
     disease_name = config["disease"]["name"]
     logger.info("=" * 60)
     logger.info("Starting pipeline for: %s", disease_name)

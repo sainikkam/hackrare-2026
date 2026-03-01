@@ -53,6 +53,10 @@ def fmt(v) -> str:
     return f"{float(v):.3f}" if v is not None else "—"
 
 
+def _slugify(s: str) -> str:
+    return s.lower().replace(" ", "_").replace("/", "_").replace("-", "_")[:40]
+
+
 # ─────────────────────────── rendering ──────────────────────────────────────
 
 def render_tree_viz(tree: dict, min_score: float):
@@ -288,18 +292,57 @@ def main():
     st.sidebar.markdown("**Drug Repurposing Navigator**")
     st.sidebar.markdown("---")
 
+    # ── Dynamic search box ───────────────────────────────────────────────────
+    st.sidebar.markdown("#### 🔍 Search any rare disease")
+    search_query = st.sidebar.text_input(
+        "Disease name", placeholder="e.g. Dravet Syndrome, CDKL5...",
+        label_visibility="collapsed",
+    )
+    if st.sidebar.button("Search OpenTargets"):
+        if search_query.strip():
+            from src.loaders.opentargets_loader import search_disease
+            with st.spinner("Searching OpenTargets…"):
+                hits = search_disease(search_query.strip())
+            if hits:
+                st.session_state["search_hits"] = hits
+                st.session_state["dynamic_disease_name"] = None  # reset until user picks
+            else:
+                st.sidebar.warning("No diseases found — try a different spelling.")
+                st.session_state["search_hits"] = []
+        else:
+            st.sidebar.warning("Enter a disease name to search.")
+
+    hits = st.session_state.get("search_hits", [])
+    if hits:
+        hit_names = [h["name"] for h in hits]
+        chosen = st.sidebar.radio("Select match:", hit_names, key="hit_radio")
+        st.session_state["dynamic_disease_name"] = chosen
+        if st.sidebar.button("✕ Clear search", key="clear_search"):
+            st.session_state["search_hits"] = []
+            st.session_state["dynamic_disease_name"] = None
+            st.rerun()
+
+    st.sidebar.markdown("---")
+
+    # ── Pre-loaded diseases ──────────────────────────────────────────────────
     config_options = {
         "Tuberous Sclerosis Complex":  {"config": "tsc",      "tree": "tuberous_sclerosis_complex"},
         "Neurofibromatosis Type 1":    {"config": "nf1",      "tree": "neurofibromatosis_type_1"},
         "SYNGAP1-Related Disorders":   {"config": "syngap1",  "tree": "syngap1_related_disorders"},
         "Angelman Syndrome":           {"config": "angelman", "tree": "angelman_syndrome"},
     }
-    selected_disease = st.sidebar.selectbox("Select disease", list(config_options.keys()))
-    config_name = config_options[selected_disease]["config"]
-    tree_slug   = config_options[selected_disease]["tree"]
 
-    # Find tree file
-    tree_path = ROOT / "data" / f"tree_{tree_slug}.json"
+    dynamic_disease = st.session_state.get("dynamic_disease_name")
+    if not dynamic_disease:
+        st.sidebar.markdown("#### Or choose pre-loaded")
+        selected_disease = st.sidebar.selectbox("Disease", list(config_options.keys()), label_visibility="collapsed")
+        config_name = config_options[selected_disease]["config"]
+        tree_slug   = config_options[selected_disease]["tree"]
+        tree_path   = ROOT / "data" / f"tree_{tree_slug}.json"
+        is_dynamic  = False
+    else:
+        selected_disease = dynamic_disease
+        is_dynamic = True
 
     st.sidebar.markdown("---")
     min_score_filter = st.sidebar.slider("Min final score", 0.0, 1.0, 0.0, 0.05)
@@ -307,18 +350,29 @@ def main():
 
     st.sidebar.markdown("---")
     if st.sidebar.button("▶ Run Pipeline", type="primary"):
-        from src.pipeline import run_pipeline
-        config_path = str(ROOT / "config" / f"{config_name}.yaml")
-        with st.spinner(f"Running pipeline for {selected_disease}… (~3–5 min first run)"):
-            tree = run_pipeline(config_path)
-        st.session_state[f"tree_{config_name}"] = tree
+        if is_dynamic:
+            from src.pipeline import run_pipeline_dynamic
+            with st.spinner(f"Running pipeline for {selected_disease}… (3–5 min first run)"):
+                tree = run_pipeline_dynamic(selected_disease)
+            st.session_state[f"tree_dyn_{_slugify(selected_disease)}"] = tree
+        else:
+            from src.pipeline import run_pipeline
+            config_path_str = str(ROOT / "config" / f"{config_name}.yaml")
+            with st.spinner(f"Running pipeline for {selected_disease}… (3–5 min first run)"):
+                tree = run_pipeline(config_path_str)
+            st.session_state[f"tree_{config_name}"] = tree
         st.rerun()
 
     # Load tree
-    tree = st.session_state.get(f"tree_{config_name}") or load_tree(tree_path)
+    if is_dynamic:
+        tree = st.session_state.get(f"tree_dyn_{_slugify(selected_disease)}")
+    else:
+        tree = st.session_state.get(f"tree_{config_name}") or load_tree(tree_path)
 
     # Header
-    st.title(f"🧬 Drug Repurposing Navigator — {selected_disease}")
+    prefix = "🔍" if is_dynamic else "🧬"
+    suffix = " — custom query" if is_dynamic else ""
+    st.title(f"{prefix} Drug Repurposing Navigator — {selected_disease}{suffix}")
 
     if tree is None:
         st.info("No results yet. Click **▶ Run Pipeline** in the sidebar.")

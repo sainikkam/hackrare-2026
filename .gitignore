@@ -52,3 +52,5 @@ data/cache/
 data/hpo/
 .venv/
 venv/
+
+lib/

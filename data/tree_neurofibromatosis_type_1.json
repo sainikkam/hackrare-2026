@@ -88,17 +88,17 @@
                 "FGFR3"
               ],
               "drug_targets": [
+                "INSIG2",
                 "HMGCR",
-                "HMGCS2",
-                "FDPS",
                 "SREBF1",
                 "MVK",
-                "FDFT1",
-                "INSIG1",
-                "INSIG2",
                 "SQLE",
+                "INSIG1",
                 "SREBF2",
-                "HMGCS1"
+                "FDFT1",
+                "HMGCS1",
+                "HMGCS2",
+                "FDPS"
               ],
               "mean_network_distance": 10.0,
               "hpo_confidence": "High",
@@ -221,18 +221,18 @@
                 "FBN1"
               ],
               "drug_targets": [
+                "MAP2K1",
                 "ARAF",
-                "LAMTOR3",
                 "MAPK3",
-                "KRAS",
                 "MAPK1",
                 "KSR2",
-                "MAP3K1",
-                "MAP2K1",
-                "BRAF",
-                "MAP2K2",
                 "KSR1",
-                "RAF1"
+                "RAF1",
+                "MAP3K1",
+                "LAMTOR3",
+                "KRAS",
+                "MAP2K2",
+                "BRAF"
               ],
               "mean_network_distance": 2.125,
               "hpo_confidence": "High",
@@ -306,18 +306,18 @@
                 "FBN1"
               ],
               "drug_targets": [
+                "MAP2K1",
                 "ARAF",
-                "LAMTOR3",
                 "MAPK3",
-                "KRAS",
                 "MAPK1",
                 "KSR2",
-                "MAP3K1",
-                "MAP2K1",
-                "BRAF",
-                "MAP2K2",
                 "KSR1",
-                "RAF1"
+                "RAF1",
+                "MAP3K1",
+                "LAMTOR3",
+                "KRAS",
+                "MAP2K2",
+                "BRAF"
               ],
               "mean_network_distance": 2.125,
               "hpo_confidence": "High",
@@ -385,17 +385,17 @@
                 "CREBBP"
               ],
               "drug_targets": [
-                "TGFBR1",
-                "CALML3",
-                "CALM3",
                 "RPTOR",
+                "CALM3",
                 "MTOR",
+                "FKBP1A",
                 "PPP3R1",
-                "CALML6",
+                "CALML3",
                 "MLST8",
+                "CALML6",
+                "TGFBR1",
                 "CALML5",
-                "ACVR1",
-                "FKBP1A"
+                "ACVR1"
               ],
               "mean_network_distance": 3.125,
               "hpo_confidence": "High",
@@ -463,17 +463,17 @@
                 "CREBBP"
               ],
               "drug_targets": [
-                "TGFBR1",
-                "CALML3",
-                "CALM3",
                 "RPTOR",
+                "CALM3",
                 "MTOR",
+                "FKBP1A",
                 "PPP3R1",
-                "CALML6",
+                "CALML3",
                 "MLST8",
+                "CALML6",
+                "TGFBR1",
                 "CALML5",
-                "ACVR1",
-                "FKBP1A"
+                "ACVR1"
               ],
               "mean_network_distance": 3.125,
               "hpo_confidence": "High",
@@ -662,18 +662,18 @@
             "FBN1"
           ],
           "drug_targets": [
+            "MAP2K1",
             "ARAF",
-            "LAMTOR3",
             "MAPK3",
-            "KRAS",
             "MAPK1",
             "KSR2",
-            "MAP3K1",
-            "MAP2K1",
-            "BRAF",
-            "MAP2K2",
             "KSR1",
-            "RAF1"
+            "RAF1",
+            "MAP3K1",
+            "LAMTOR3",
+            "KRAS",
+            "MAP2K2",
+            "BRAF"
           ],
           "mean_network_distance": 2.125,
           "hpo_confidence": "High",
@@ -747,18 +747,18 @@
             "FBN1"
           ],
           "drug_targets": [
+            "MAP2K1",
             "ARAF",
-            "LAMTOR3",
             "MAPK3",
-            "KRAS",
             "MAPK1",
             "KSR2",
-            "MAP3K1",
-            "MAP2K1",
-            "BRAF",
-            "MAP2K2",
             "KSR1",
-            "RAF1"
+            "RAF1",
+            "MAP3K1",
+            "LAMTOR3",
+            "KRAS",
+            "MAP2K2",
+            "BRAF"
           ],
           "mean_network_distance": 2.125,
           "hpo_confidence": "High",
@@ -826,17 +826,17 @@
             "CREBBP"
           ],
           "drug_targets": [
-            "TGFBR1",
-            "CALML3",
-            "CALM3",
             "RPTOR",
+            "CALM3",
             "MTOR",
+            "FKBP1A",
             "PPP3R1",
-            "CALML6",
+            "CALML3",
             "MLST8",
+            "CALML6",
+            "TGFBR1",
             "CALML5",
-            "ACVR1",
-            "FKBP1A"
+            "ACVR1"
           ],
           "mean_network_distance": 3.125,
           "hpo_confidence": "High",
@@ -904,17 +904,17 @@
             "CREBBP"
           ],
           "drug_targets": [
-            "TGFBR1",
-            "CALML3",
-            "CALM3",
             "RPTOR",
+            "CALM3",
             "MTOR",
+            "FKBP1A",
             "PPP3R1",
-            "CALML6",
+            "CALML3",
             "MLST8",
+            "CALML6",
+            "TGFBR1",
             "CALML5",
-            "ACVR1",
-            "FKBP1A"
+            "ACVR1"
           ],
           "mean_network_distance": 3.125,
           "hpo_confidence": "High",
@@ -1065,17 +1065,17 @@
             "FGFR3"
           ],
           "drug_targets": [
+            "INSIG2",
             "HMGCR",
-            "HMGCS2",
-            "FDPS",
             "SREBF1",
             "MVK",
-            "FDFT1",
-            "INSIG1",
-            "INSIG2",
             "SQLE",
+            "INSIG1",
             "SREBF2",
-            "HMGCS1"
+            "FDFT1",
+            "HMGCS1",
+            "HMGCS2",
+            "FDPS"
           ],
           "mean_network_distance": 10.0,
           "hpo_confidence": "High",

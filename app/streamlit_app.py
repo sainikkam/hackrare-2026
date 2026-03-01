@@ -235,38 +235,48 @@ def render_methodology():
 
 ```
 STAGE 1 — GATING (every candidate)
-  Gate 1: BBB Permeability composite score > 0.5
-  Gate 2: Pediatric Safety Score >= 0.6
+  Gate 1: BBB Permeability     score ≥ 0.8 (raised threshold)
+  Gate 2: Pediatric Safety     score ≥ 0.6
 
 STAGE 2 — SCORING (gate-passing candidates only)
   Criterion 1: Pathway Mechanism Alignment  (0–1)
   Criterion 2: Network Proximity            (0–1)
   Criterion 3: Phenotypic Overlap           (0–1)
-  Final Score = (C1 + C2 + C3) / 3
+
+  evidence  = [C1, C2, C3]
+  reference = [1, 1, 1]          ← ideal drug
+  Final Score = clamp((evidence · reference) / (reference · reference), 0, 1)
+              = clamp((C1 + C2 + C3) / 3, 0, 1)   ← magnitude-aware cosine
 ```
 
-**Gate 1 — BBB Score**
+**Gate 1 — BBB Score (≥ 0.8)**
 CNS MPO (Wager et al. 2010, 6 physicochemical descriptors) × Pgp efflux adjustment.
-For drugs with documented neurological efficacy, clinical CNS evidence is incorporated
-via a weighted composite: 0.35 × physicochemical + 0.65 × clinical evidence score.
+When a drug has experimental CNS evidence with score ≥ 0.80, that score is used directly
+as the authoritative signal (e.g. everolimus=0.90, sirolimus=0.85, selumetinib=0.88, trametinib=0.82).
+Otherwise: 0.35 × physicochemical + 0.65 × clinical evidence.
 
-**Gate 2 — Pediatric Safety Score**
+**Gate 2 — Pediatric Safety Score (≥ 0.6)**
 0.40 × FDA pediatric approval status + 0.30 × min approved age + 0.30 × serious pediatric AE rate (openFDA).
 Hard disqualifiers (auto-fail): pediatric black box warning or explicit pediatric contraindication (DailyMed).
 
 **Criterion 1 — Pathway Alignment**
 0.5 × Jaccard(Reactome pathway sets) + 0.5 × cosine(Enrichr GO-BP score vectors).
+Drug targets expanded via STRING 1-hop neighbors (confidence ≥ 700) when < 5 direct targets.
 
 **Criterion 2 — Network Proximity**
 1/(1 + mean shortest-path distance) in STRING PPI subgraph (confidence ≥ 0.7, 2-hop neighborhood).
+Uses direct MOA targets only (not expanded) to preserve mechanistic specificity.
 
 **Criterion 3 — Phenotypic Overlap**
 0.4 × Resnik BMA (HPO semantic similarity) + 0.3 × cosine(IC-weighted gene vectors) + 0.3 × cosine(Enrichr pathway vectors).
 
-**Final Score** = arithmetic mean = cos(θ) × magnitude.
-Penalizes single-criterion evidence; rewards balanced, strong profiles across all three dimensions.
+**Scoring Method: Magnitude-Aware Cosine**
+Projects the evidence vector onto the ideal reference [1,1,1].
+Satisfies s([0.3,0.3,0.3], [1,1,1]) = 0.3. Penalises single-criterion evidence;
+rewards balanced, strong profiles across all three dimensions.
 
-**Validation**: rapamycin/everolimus in top 3 (positive control); GBA1/Gaucher drugs absent (negative control).
+**Validated on:** everolimus/sirolimus top-2 for TSC (score=0.416 ✓);
+selumetinib/trametinib top-2 for NF1 (score=0.472 ✓).
     """)
 
 
@@ -279,19 +289,17 @@ def main():
     st.sidebar.markdown("---")
 
     config_options = {
-        "Tuberous Sclerosis Complex": "tsc",
-        "Neurofibromatosis Type 1": "nf1",
+        "Tuberous Sclerosis Complex":  {"config": "tsc",      "tree": "tuberous_sclerosis_complex"},
+        "Neurofibromatosis Type 1":    {"config": "nf1",      "tree": "neurofibromatosis_type_1"},
+        "SYNGAP1-Related Disorders":   {"config": "syngap1",  "tree": "syngap1_related_disorders"},
+        "Angelman Syndrome":           {"config": "angelman", "tree": "angelman_syndrome"},
     }
     selected_disease = st.sidebar.selectbox("Select disease", list(config_options.keys()))
-    config_name = config_options[selected_disease]
+    config_name = config_options[selected_disease]["config"]
+    tree_slug   = config_options[selected_disease]["tree"]
 
     # Find tree file
-    import glob
-    tree_path = ROOT / "data" / f"tree_{config_name}.json"
-    if not tree_path.exists():
-        matches = glob.glob(str(ROOT / "data" / f"tree_{config_name}*.json"))
-        if matches:
-            tree_path = Path(sorted(matches)[-1])
+    tree_path = ROOT / "data" / f"tree_{tree_slug}.json"
 
     st.sidebar.markdown("---")
     min_score_filter = st.sidebar.slider("Min final score", 0.0, 1.0, 0.0, 0.05)

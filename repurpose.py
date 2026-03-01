@@ -5,14 +5,33 @@ repurpose.py — Standalone Rare Disease Drug Repurposing Navigator
 Inputs a rare disease name, queries public APIs, scores candidate drugs
 using a 3-criterion mechanistic pipeline, and prints ranked results.
 
-Usage:
-    python repurpose.py "Dravet Syndrome"
-    python repurpose.py              # prompts for input
-
-Dependencies (two packages only):
+Installation:
     pip install requests networkx
 
-No API keys required. Results are cached in ~/.repurpose_cache/ for speed.
+Usage:
+    python repurpose.py "Dravet Syndrome"       # direct argument
+    python repurpose.py "CDKL5 Deficiency"      # any rare disease
+    python repurpose.py                          # interactive prompt
+
+How it works:
+    1. Resolves the disease name via OpenTargets and builds a gene module
+    2. Constructs a STRING protein-protein interaction network
+    3. Computes a disease pathway signature (Enrichr + KEGG/Reactome/GO)
+    4. Collects candidate drugs from 6 related neurological diseases
+    5. Scores each drug through two gates and three criteria:
+       - Gate 1: Blood-brain barrier permeability (threshold >= 0.8)
+       - Gate 2: Pediatric safety profile (threshold >= 0.6)
+       - C1: Pathway alignment (Reactome Jaccard + Enrichr cosine)
+       - C2: Network proximity (shortest path in STRING PPI graph)
+       - C3: Phenotypic overlap (HPO + gene + pathway similarity)
+    6. Final score = magnitude-aware cosine: clamp(mean(C1,C2,C3), 0, 1)
+
+Output:
+    Ranked table of drugs that pass both gates, sorted by final score.
+    Higher score = stronger mechanistic rationale for repurposing.
+
+No API keys required. All queries use free public APIs.
+Results are cached in ~/.repurpose_cache/ for speed on repeat runs.
 """
 
 import argparse
@@ -298,7 +317,7 @@ def string_interactions(gene_symbols: list, confidence: int = 700, limit: int = 
 def build_ppi_graph(seed_genes: list, confidence: int = 700) -> nx.Graph:
     # 1-hop interactions
     edges = string_interactions(seed_genes, confidence=confidence, limit=300)
-    hop1_genes = list({e["a"] for e in edges} | {e["b"] for e in edges} - set(seed_genes))
+    hop1_genes = list(({e["a"] for e in edges} | {e["b"] for e in edges}) - set(seed_genes))
     # 2-hop sample
     edges += string_interactions(hop1_genes[:80], confidence=confidence, limit=100)
     G = nx.Graph()
